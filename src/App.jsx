@@ -10,6 +10,7 @@ function Section1(){
   return(
     <section>
       <h1>Nuestro metodo</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi totam quas nesciunt adipisci voluptates, reprehenderit culpa eum excepturi perferendis explicabo velit earum vel. Eius voluptates beatae molestias veniam inventore accusamus!</p>
     </section>
   )
 }
