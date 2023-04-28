@@ -1,7 +1,12 @@
+import { useState } from 'react'
 import Logo from './assets/img/WellnessLogo.png'
 import portada from './assets/img/Portada.png'
 import menuRs from './assets/img/MenuRS.png'
 import prueba from './assets/img/imgPruebas.png'
+import tiktok from './assets/img/tiktokLogo.png'
+import facebook from './assets/img/facebookLogo.png'
+import instagram from './assets/img/instagramLogo.png'
+import twitter from './assets/img/twitterLogo.png'
 
 function Section0(){
   return(
@@ -95,13 +100,38 @@ function Section4(){
 }
 
 function BtnRs(){
+  const [showButtons, setShowButtons] = useState(false)
+
+  function handleClick(){
+    setShowButtons(!showButtons)
+  }
+
   return(
     <>
-      <img src={menuRs} alt="Menu Redes Sociales" 
-      className='w-36 h-36 fixed bottom-0 right-0 grayscale-[20%]'/>
+      <a href="https://www.tiktok.com/" target='_blank'>
+          <img src={tiktok} alt='Logo Tik-Tok' 
+          className={`h-20 w-20 opacity-40 hover:opacity-100 fixed right-7 transition-all duration-300 ${showButtons ? `visible bottom-[24.5rem]` : 'invisible bottom-7' }`}/>
+      </a>
+      <a href="https://www.facebook.com/" target='_blank'>
+          <img src={facebook} alt='Logo Facebook' 
+          className={`h-20 w-20 opacity-40 hover:opacity-100 fixed right-7 transition-all duration-300 ${showButtons ? `visible bottom-[19rem]` : 'invisible bottom-7' }`}/>
+      </a>
+      <a href="https://www.twitter.com/" target='_blank'>
+          <img src={twitter} alt='Logo Twitter' 
+          className={`h-20 w-20 opacity-40 hover:opacity-100 fixed right-7 transition-all duration-300 ${showButtons ? `visible bottom-[13.5rem]` : 'invisible bottom-7' }`}/>
+      </a>
+      <a href="https://www.instagram.com/" target='_blank'>
+          <img src={instagram} alt='Logo Instagram' 
+          className={`h-20 w-20 opacity-40 hover:opacity-100 fixed right-7 transition-all duration-300 ${showButtons ? `visible bottom-[8rem]` : 'invisible bottom-7' }`}/>
+      </a>
+      <img src={menuRs} onClick={handleClick} alt="Menu Redes Sociales" 
+      className={`w-24 h-24 fixed bottom-5 right-5 hover:opacity-100 cursor-pointer transition-all duration-300 ${showButtons ? 'opacity-100':'opacity-40'}`}/>
     </>
   )
 }
+
+
+
 
 function App() {
   return (
