@@ -16,7 +16,9 @@ export default {
       'pink': '#f1dcdb',
       'yellow': '#ede9d0',
       'blue': '#d5cfd9',
-      'green': '#cddecc'
+      'green': '#cddecc',
+      'black': '#333'
+      
     },
     fontFamily: {
       'bellota': ['Bellota Text', 'cursive']
