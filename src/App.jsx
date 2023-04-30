@@ -2,7 +2,7 @@ import { useState, useEffect} from 'react'
 import Logo from './assets/img/WellnessLogo.png'
 import portada from './assets/img/Portada.png'
 import menuRs from './assets/img/MenuRS.png'
-import prueba from './assets/img/imgPruebas.png'
+import imgtesting from './assets/img/imgPruebas.png'
 import tiktok from './assets/img/tiktokLogo.png'
 import facebook from './assets/img/facebookLogo.png'
 import instagram from './assets/img/instagramLogo.png'
@@ -46,7 +46,7 @@ function Section2(){
           <div className='flex flex-col w-full h-full items-center gap-8 py-9'>
             <div className='flex flex-row justify-center items-center gap-7'>
               <h2 className='uppercase text-lg'>Titulo</h2>
-              <img src={prueba} alt="Imagen Prueba" className=' rounded-full 
+              <img src={imgtesting} alt="Imagen Prueba" className=' rounded-full 
               h-16 w-16 ' />
             </div>
               <div className='w-[80%] text-center'>
