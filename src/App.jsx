@@ -128,22 +128,30 @@ function Section4(){
   )
 }
 
+function Header(){
+  return(<></>)
+}
+
+function BtnRs(){
+  return(<></>)
+}
+
 function App() {
   return (
     <>
-      <div className=" font-bellota ">
-        <header>
-          <nav></nav>
-        </header>
+      <div className=" font-bellota mr-0 text-brown-300 font-semibold">
+        <Header/>
         <Section0/>
         <Section1/>
         <Section2/>
         <Section3/>
-
+        <Section4/>
+        <BtnRs/>
         <footer></footer>
       </div>
     </>
   )
 }
+
 
 export default App
