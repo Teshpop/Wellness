@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect} from 'react'
 import Logo from './assets/img/WellnessLogo.png'
 import portada from './assets/img/Portada.png'
 import menuRs from './assets/img/MenuRS.png'
@@ -10,7 +10,7 @@ import twitter from './assets/img/twitterLogo.png'
 
 function Section0(){
   return(
-    <section>
+    <section id='home'>
       <div className=' z-2 bg-brown-300 absolute w-full h-screen bg-fixed bg-opacity-40 '></div>
       <div className=' z-1 bg-center h-screen w-full bg-fixed bg-cover bg-no-repeat flex justify-center' 
       style={{backgroundImage: `url(${portada})` }}>
@@ -39,47 +39,75 @@ function Section1(){
 
 function Section2(){
 
-  function Cont(){
+  function Cont({id, color, text}){
     return(
       <>
-        <div className='bg-white w-[90%] lg:w-[35%] flex flex-col rounded-xl py-5 pb-10 px-10 lg:my-52 shadow-md '>
-          <div className='flex flex-row justify-center items-center py-6'>
-            <h2 className=' text-3xl mx-5 '>Titulo</h2>
-            <img src={prueba} className='w-16 h-16 rounded-full mx-5'/>
+        <article id={id} className={`flex-none rounded-2xl drop-shadow-md snap-center lg:w-[40%] ${color}`}>
+          <div className='flex flex-col w-full h-full items-center gap-8 py-9'>
+            <div className='flex flex-row justify-center items-center gap-7'>
+              <h2 className='uppercase text-lg'>Titulo</h2>
+              <img src={prueba} alt="Imagen Prueba" className=' rounded-full 
+              h-16 w-16 ' />
+            </div>
+              <div className='w-[80%] text-center'>
+                <p>
+                  {text}
+                </p>
+              </div>
           </div>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro similique nam repellat 
-            perspiciatis ad eaque sequi eum tempora, nobis aperiam. Enim, nulla? Tenetur quaerat 
-            pariatur laudantium enim omnis, sunt illo.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro similique nam repellat 
-            perspiciatis ad eaque sequi eum tempora, nobis aperiam. Enim, nulla? Tenetur quaerat 
-            pariatur laudantium enim omnis, sunt illo.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro similique nam repellat 
-            perspiciatis ad eaque sequi eum tempora, nobis aperiam. Enim, nulla? Tenetur quaerat 
-            pariatur laudantium enim omnis, sunt illo.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro similique nam repellat 
-            perspiciatis ad eaque sequi eum tempora, nobis aperiam. Enim, nulla? Tenetur quaerat 
-            pariatur laudantium enim omnis, sunt illo.
-          </p>
+        </article>
+      </>
+    )
+  }
+
+  function Button({id, color}){
+    return(
+      <>
+      <a href={id}>
+        <div className={`${color} rounded-full h-10 w-10 shadow-md cursor-pointer hover:shadow-none transition-all duration-300 `}>
         </div>
+      </a>
       </>
     )
   }
 
   return(
-    <section id='programs' className='z-10'>
-      <div className=' w-full h-auto bg-brown-200'>
-        <div className=' flex flex-col justify-center items-center '>
-          <h1 className='uppercase text-4xl md:text-5xl lg:text-6xl relative top-24'>programas</h1>
-          <div className='flex flex-col lg:flex-row lg:gap-20 justify-center gap-10 items-center relative pt-40 pb-20 lg:top-0'>
-            <Cont/>
-            <Cont/>
-            <Cont/>
-            <Cont/>
-            <Cont/>
-            <Cont/>
-            <Cont/>
-          </div>
+    <section id='programs'>
+      <div className='flex flex-col bg-brown-200 justify-center w-full items-center lg:h-screen gap-5'>
+        <h1 className='uppercase text-3xl md:text-4xl lg:text-5xl'>programas</h1>
+        <div className="flex flex-row overflow-x-scroll gap-[10rem] snap-x w-full h-[70%] py-10">
+          <Cont id={'1'} color={'bg-white'}
+          text={
+            'lorem ipus'
+            }/>
+          <Cont id={'2'} color={'bg-blue'}
+          text={
+            'lorem ipus'
+            }/>
+          <Cont id={'3'} color={'bg-yellow'}
+          text={
+            'lorem ipus'
+            }/>
+          <Cont id={'4'} color={'bg-green'}
+          text={
+            'lorem ipus'
+            }/>
+          <Cont id={'5'} color={'bg-pink'}
+          text={
+            'lorem ipus'
+            }/>
+          <Cont id={'6'} color={'bg-white'}
+          text={
+            'lorem ipus'
+            }/>
+        </div>
+        <div className='flex flex-row gap-5'>
+          <Button id={'#1'} color={'bg-white'}/>
+          <Button id={'#2'} color={'bg-blue'}/>
+          <Button id={'#3'} color={'bg-yellow'}/>
+          <Button id={'#4'} color={'bg-green'}/>
+          <Button id={'#5'} color={'bg-pink'}/>
+          <Button id={'#6'} color={'bg-white'}/>
         </div>
       </div>
     </section>
@@ -163,7 +191,7 @@ function Header(){
   return(
     <>
       <header className={`z-10 flex flex-row justify-between bg-brown-200 h-24 w-screen bg-opacity-50 fixed drop-shadow-md ${scrollDirection === 'down' ? '-top-24': 'top-0'} transition-all duration-500`}>
-          <img src={Logo} alt="Logo Welness" className=' w-16 h-16 ml-[4.563rem] mt-5 relative'/>
+          <a href="#home"><img src={Logo} alt="Logo Welness" className=' w-16 h-16 ml-[4.563rem] mt-5 relative'/></a>
           <nav className=' md:flex lg:flex-row md:items-center md:justify-center md:w-full hidden'>
             <div className=' flex flex-row justify-evenly w-[95%] text-base lg:text-xl '>
               <a href="#">Nuestro método</a>
@@ -172,7 +200,7 @@ function Header(){
               <a href="#">Contacto</a>
             </div>
           </nav>
-          <button className='block md:hidden py-auto px-7  rounded focus:outline-none md:hover:bg-brown-100 focus:bg-brown-100  transition-all duration-300' onClick={()=>{setShowMenu(!showMenu)}}>
+          <button className={`block md:hidden py-auto px-7  rounded focus:outline-none md:hover:bg-brown-100 focus:bg-brown-100  transition-all duration-300 ${scrollDirection === 'down' ? 'top-0': 'top-0'}`} onClick={()=>{setShowMenu(!showMenu)}}>
             <div className=' w-10 h-1 bg-brown-200 mb-2 '></div>
             <div className=' w-10 h-1 bg-brown-200 mb-2 '></div>
             <div className=' w-10 h-1 bg-brown-200 mb-2 '></div>
