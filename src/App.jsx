@@ -1,6 +1,6 @@
 import imgmethod from './assets/img/imgWelness.png'
 import imgtesting from './assets/img/imgPruebas.png'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 function Section0(){
   return(
@@ -9,48 +9,42 @@ function Section0(){
     </section>
   )
 }
-function pruebas(){
-  const containerRef = useRef(null)
-  const[isVisible, setIsVisible] = useState(false)
-
-  const callbackFuntion = (entries) =>{
-    const [ entry ] = entries
-    setIsVisible(entry.isIntersecting)
-  }
-const options = {
-    root:null,
-    rootMargin: "0px",
-    threshold:1.0
-}
-
-useEffect(() => {
-
-  const observer = new IntersectionObserver(callbackFuntion, options)
-  if(containerRef.current) observer.observe(containerRef.current)
-
-  return () => {
-    if(containerRef.current) observer.unobserve(containerRef,current)
-  }
-}, [containerRef,options])
-
-return(
-  <div id='app' className=' flex flex-col items-center justify-center bg-black'>
-    <div id='isVisible' className=''>{isVisible ? "in Viewport" : "not in view"}</div>
-    <div id='section' className='w-[20rem] h-[20rem] '></div>
-    <div id='box' className='flex justify-center items-center bg-brown-300 text-brown-300' ref={containerRef}> observe me you</div>
-  </div>
-)
-}
-
 
 function Section1(){
+  const [scrollDirection, setScrollDirection] = useState(null);
+
+  useEffect(() => {
+    let lastScrollY = window.pageYOffset;
+
+    const updateScrollDirection = () => {
+      const scrollY = window.pageYOffset;
+      const direction = scrollY > lastScrollY ? "down" : "up";
+      if (direction !== 'up' && (scrollY - lastScrollY > 5 || scrollY - lastScrollY < -5)) {
+        setScrollDirection(direction);
+      }else if(scrollY === 0){
+        setScrollDirection(null)
+      }
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+    };
+
+    window.addEventListener("scroll", updateScrollDirection);
+
+    return () => {
+      window.removeEventListener("scroll", updateScrollDirection);
+    }
+  }, [scrollDirection]);
+
+  const imgPosition = scrollDirection === "down" ? "-translate-x-0 opacity-100" : "-translate-x-full opacity-0";
+  const textPosition = scrollDirection === "down" ? "translate-x-0 opacity-100" : "translate-x-full opacity-0";
+
+
   return(
     <div className='bg-brown-100 w-full text-brown-300 flex flex-col md:flex-row '>
-      <section id="ourmethod" className='my-[8rem] md:flex-row flex flex-col justify-evenly items-center' >
+      <section id="ourmethod" className='my-[8rem] lg:flex-row flex flex-col justify-evenly items-center' >
         
-        <img src={imgmethod} alt="welness place" className=' mx-[4rem] md:mx-[6rem] lg:mx-[7rem] my-[2rem] w-[19rem] h-[19rem] lg:w-[25rem] lg:h-[25rem] xl:w-[40rem]  xl:h-[40rem] rounded-3xl  lg:mt-[5rem] lg:mb-[2rem]	 ' />
+        <img src={imgmethod} alt="welness place" className={`relative  left-0 ${imgPosition} transition-all duration-500 ease-out mx-[4rem] md:mx-[3rem] lg:mx-[5rem] my-[2rem] w-[19rem] h-[19rem] lg:w-[25rem] lg:h-[25rem] xl:w-[40rem]  xl:h-[40rem] rounded-3xl  lg:mt-[5rem] lg:mb-[2rem]	 `} />
             
-             <div className='my-[3rem] lg:mx-[4rem] xl:pl-[1rem] mt-[2rem] w-[15rem] lg:w-[25rem]  xl:w-[50rem]  lg:flex flex-col justify-center items-start  font-semibold '>
+             <div className={`relative  right-0 ${textPosition} transition-all duration-500 ease-out my-[3rem] lg:mx-[4rem] xl:pl-[1rem] mt-[2rem] w-[15rem] lg:w-[25rem]  xl:w-[50rem]  lg:flex flex-col justify-center items-start  font-semibold` }>
                
                 <h1 className=' lg:text-5xl mb-[2rem] mt-[3rem]  underline underline-offset-8 decoration-brown-300 text-xl md:text-2xl  uppercase text-center'>nuestro metodo </h1> 
                 
@@ -137,20 +131,19 @@ function Section4(){
 function App() {
   return (
     <>
-      <body className=" font-bellota ">
+      <div className=" font-bellota ">
         <header>
           <nav></nav>
         </header>
-        <pruebas/>
         <Section0/>
         <Section1/>
         <Section2/>
         <Section3/>
 
         <footer></footer>
-      </body>
+      </div>
     </>
   )
 }
 
-export default pruebas
+export default App
