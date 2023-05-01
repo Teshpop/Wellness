@@ -1,9 +1,13 @@
 import imgmethod from './assets/img/imgWelness.png'
 import imgtesting from './assets/img/imgPruebas.png'
 import Modal from 'react-modal'; 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 function Section0(){
+  
+
+ 
+
   return(
     <section>
       <h1>Nombre</h1>
@@ -13,34 +17,38 @@ function Section0(){
 
 function Section1(){
   const [scrollDirection, setScrollDirection] = useState(null);
+  
+const divRef = useRef()
+useEffect(() => {
+  const div = divRef.current;
+  const divTop = div.offsetTop;
+  const divHeight = div.offsetHeight;
+  const windowHeight = window.innerHeight;
 
-  useEffect(() => {
-    let lastScrollY = window.pageYOffset;
-
-    const updateScrollDirection = () => {
-      const scrollY = window.pageYOffset;
-      const direction = scrollY > lastScrollY ? "down" : "up";
-      if (direction !== 'up' && (scrollY - lastScrollY > 5 || scrollY - lastScrollY < -5)) {
-        setScrollDirection(direction);
-      }else if(scrollY === 0){
-        setScrollDirection(null)
-      }
-      lastScrollY = scrollY > 0 ? scrollY : 0;
-    };
-
-    window.addEventListener("scroll", updateScrollDirection);
-
-    return () => {
-      window.removeEventListener("scroll", updateScrollDirection);
+  const updateScrollDirection = () => {
+    const scrollY = window.pageYOffset;
+    const direction = scrollY > lastScrollY ? "down" : "up";
+    if (scrollY >= divTop - windowHeight / 2 && scrollY <= divTop + divHeight - windowHeight / 2) {
+      setScrollDirection(direction);
+    } else if(scrollY === 0) {
+      setScrollDirection(null)
     }
-  }, [scrollDirection]);
+    lastScrollY = scrollY <= 0 ? scrollY : 0;
+  };
+
+  let lastScrollY = window.pageYOffset;
+  window.addEventListener("scroll", updateScrollDirection);
+
+  return () => {
+    window.removeEventListener("scroll", updateScrollDirection);
+  }
+}, [scrollDirection]);
 
   const imgPosition = scrollDirection === "down" ? "-translate-x-0 opacity-100" : "-translate-x-full opacity-0";
   const textPosition = scrollDirection === "down" ? "translate-x-0 opacity-100" : "translate-x-full opacity-0";
 
-
   return(
-    <div className=' relative bg-brown-100 w-full text-brown-300 flex flex-col md:flex-row '>
+    <div ref={divRef}   className='  relative bg-brown-100 w-full text-brown-300 flex flex-col md:flex-row '>
       <section id="ourmethod" className='my-8 mx-auto lg:flex-row flex flex-col justify-evenly items-start ' >
           <div className='relative lg:w-1/2 '>
           <img src={imgmethod} 
@@ -48,7 +56,7 @@ function Section1(){
               className={`flex  left-0 ${imgPosition} transition-all duration-500 ease-out mt-[10rem] w-[19rem] h-[19rem] md:mx-[13rem] md:w-[25rem] md:h-[25rem] lg:mx-[5rem] xl:mx-full lg:w-[35rem] lg:h-full rounded-3xl `} />  
           </div>
         
-          <div className={`relative  right-0 ${textPosition} transition-all duration-500 ease-out flex flex-col justify-center font-semibold my-[3rem] mx-auto mt-[2rem] w-[15rem] md:mx-[13rem] md:w-[25rem] lg:mt-[10rem] lg:mx-full lg:w-[30rem] ` }>
+          <div  className={`relative  right-0 ${textPosition} transition-all duration-500 ease-out flex flex-col justify-center font-semibold my-[3rem] mx-auto mt-[2rem] w-[15rem] md:mx-[13rem] md:w-[25rem] lg:mt-[10rem] lg:mx-full lg:w-[30rem] ` }>
                
                 <h1 className=' lg:text-3xl mb-[2rem] mt-auto  underline underline-offset-8 decoration-brown-300 text-xl md:text-2xl  uppercase text-center'>nuestro metodo </h1> 
                 
@@ -89,20 +97,21 @@ function Section3(){
         <button onClick={openModal}>
           <img
             src={imgtesting}
-            className="my-[1rem] w-[10rem] h-[10rem] md:w-[13rem] md:h-[13rem] lg:w-[15rem] lg:h-[15rem] rounded-full lg:mt-[3rem] grayscale hover:grayscale-0"
+            className="my-[1rem] w-[10rem] h-[10rem] md:w-[13rem] md:h-[13rem] lg:w-[15rem] lg:h-[15rem] rounded-full lg:mt-[3rem] grayscale transition-all duration-500 hover:grayscale-0"
           ></img>
         </button>
   
-        <Modal className=" bg-blue w-50% h-50% md:mt-[2rem]  md:h-80% md:w-[37rem] lg:w-[60rem] lg:h-auto md:mx-auto lg:mt-[2rem] md:mb-[2rem] " isOpen={showModal} onRequestClose={closeModal}>
-          <div className="border-b mx-full w-70% md:h-30% flex flex-col md:flex-row md:justify-between item-start md:items-center p-4">
-            <img src={imgtesting} className='ml-[2rem] rounded-full h-[5rem] w-[5rem] md:h-[5rem] md:w-[5rem] lg:h-[10rem] lg:w-[10rem] '></img>
-            <h2 className="md:text-2xl lg:text-3xl font-bold">Jesus Fabian Cortez Perez</h2>
-            <button className='absolute ml-[20rem] md:mb-[5rem] md:ml-[34rem] lg:mt-[1rem] lg:ml-[57rem] font-bold lg:mb-[10rem] mr-[2rem]' onClick={closeModal}>
+        <Modal className=" bg-blue w-50% h-full md:mt-[2rem]  md:h-80% md:w-[37rem] lg:w-[60rem] lg:h-auto md:mx-auto lg:mt-[2rem] md:mb-[2rem] " isOpen={showModal} onRequestClose={closeModal}>
+          <div className="border-b mx-full  w-70% md:h-30% flex flex-col md:flex-row md:justify-between md:item-start items-center p-4">
+            <img src={imgtesting} className='ml-[4rem]  rounded-full h-[5rem] w-[5rem] md:h-[5rem] md:w-[5rem] lg:h-[10rem] lg:w-[10rem] '></img>
+            <h2 className="md:mr-[4rem] md:text-2xl lg:mr-[4 rem] lg:text-3xl font-bold">Jesus Fabian Cortez Perez</h2>
+            <button className='absolute ml-[20rem] md:mb-[rem] md:ml-[34rem] lg:mt-[1rem] lg:ml-[57rem] font-bold lg:mb-[10rem] mr-[2rem]' onClick={closeModal}>
             X
             </button>
           </div>
-          <div className="p-4 text md:text-lg lg:text-2xl md:mt-[1rem] lg:mt-[2rem] mx-[4rem] justify-center  text-justify">
+          <div className="p-4 md:text-lg lg:text-2xl md:mt-[1rem] lg:mt-[2rem] mx-[4rem] justify-center  text-justify">
             <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sint quis delectus natus veniam a, pariatur numquam, alias dolorem blanditiis saepe modi excepturi eius sequi odio sed ad quas neque!
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa similique harum quis porro. Ea earum quas expedita, dolorum in praesentium voluptatem laborum aliquid nisi, quia suscipit at placeat, autem sequi!
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, qui voluptatum, nam nisi consequuntur nemo, provident eum exercitationem quos tenetur dolore velit dolorum ipsa neque facere iure saepe dignissimos quaerat.
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis culpa quidem dolorum eaque, repudiandae eveniet facere facilis illo! Totam nisi cupiditate vero ex voluptatem. Iste non blanditiis itaque laboriosam quae.
