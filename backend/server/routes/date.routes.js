@@ -4,6 +4,6 @@ import { getDate, createDate } from "../controllers/date.controller.js";
 const router = Router();
 
 router.get("/", getDate);
-router.get("/", createDate);
+router.post("/", createDate);
 
 export default router;
