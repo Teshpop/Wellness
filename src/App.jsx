@@ -1,4 +1,4 @@
-import Form from "./components/Form.jsx";
+import Formulario from "./components/Formulario.jsx";
 import Footer from "./components/Footer.jsx";
 import BtnSocial from "./components/BtnSocial.jsx";
 import Header from "./components/Header.jsx";
@@ -122,7 +122,7 @@ function App() {
         <Section1 />
         <Section2 />
         <Section3 />
-        <Form />
+        <Formulario />
         <BtnSocial />
         <Footer />
       </div>
