@@ -117,11 +117,11 @@ function Section3(){
            className=" z-10 fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm flex justify-center items-center" >
             <div className=' '>
               <div className="  md:mx-auto md:mb-[2rem] md:mt-[2rem]  md:h-80% md:w-[37rem] lg:w-[60rem] ">
-                <div className=' bg-brown-200 bg-opacity-85 rounded-xl backdrop-blur-50 drop-shadow-lg flex flex-col'>
+                <div className=' bg-brown-200 bg-opacity-85 rounded-3xl backdrop-blur-50 drop-shadow-lg flex flex-col'>
                     <div  >
                         <div className="mx-[2rem] border-b md:h-30% flex flex-row justify-between item-center   p-4">
                           <img src={imgtesting} className='mt-[2rem]  rounded-full h-[5rem] w-[5rem] md:h-[7rem] md:w-[7rem] lg:h-[10rem] lg:w-[10rem] '></img>
-                          <h2 className="mx-[2rem] mt-[4rem] md:mt-[4rem] lg:mt-[10rem] md:mr-[4rem] md:text-3xl lg:mr-[4rem] lg:text-4xl font-bold">Jesus Fabian Cortez Perez</h2>
+                          <h2 className="mx-[2rem] mt-[4rem] md:mt-[4rem] lg:mt-[5rem] md:mr-[4rem] md:text-3xl lg:mr-[8rem] lg:text-4xl font-bold">Jesus Fabian Cortez Perez</h2>
                           <button  onClick={onClose} className="md:absolute font-bold  md:ml-[32rem] md:mb-[3rem]  lg:ml-[55rem] lg:mb-[8rem] ">
                           x</button>
                         </div>
