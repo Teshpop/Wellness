@@ -1,19 +1,29 @@
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
-
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getDataRequest } from "../api/datas.api.js";
-import { formatLongDate } from "react-calendar/dist/cjs/shared/dateFormatter";
 
 function Calendario() {
+  const [dates, setDates] = useState([]);
+
   useEffect(() => {
     async function loadData() {
       const result = await getDataRequest();
-      console.log(result);
+      setDates(result.data);
     }
     loadData();
   }, []);
-  return <></>;
+
+  return (
+    <>
+      <div>
+        {dates.map((date) => (
+          <div key={date.id}>
+            <p>{date.date}</p>
+            <p>{date.time}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  );
 }
 
 export default Calendario;

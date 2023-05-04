@@ -3,8 +3,8 @@ import Footer from "./components/Footer.jsx";
 import BtnSocial from "./components/BtnSocial.jsx";
 import Header from "./components/Header.jsx";
 
-import portada from "./assets/img/Portada.png";
-import imgtesting from "./assets/img/imgPruebas.png";
+import portada from "/img/Portada.png";
+import imgtesting from "/img/imgPruebas.png";
 
 function Section0() {
   return (

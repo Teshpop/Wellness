@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Logo from "../assets/img/WellnessLogo.png";
+import Logo from "/img/WellnessLogo.png";
 
 function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState(null);
@@ -59,7 +59,7 @@ function Header() {
   return (
     <>
       <header
-        className={`z-10 flex flex-row justify-between bg-brown-200 h-24 w-screen bg-opacity-50 fixed drop-shadow-md ${
+        className={`z-10 flex flex-row justify-between backdrop-blur-sm bg-brown-200 h-24 w-screen bg-opacity-50 fixed drop-shadow-md ${
           scrollDirection === "down" ? "-top-24" : "top-0"
         } transition-all duration-500`}
       >

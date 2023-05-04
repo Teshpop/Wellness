@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import menuRs from "../assets/img/MenuRS.png";
-import tiktok from "../assets/img/tiktokLogo.png";
-import facebook from "../assets/img/facebookLogo.png";
-import instagram from "../assets/img/instagramLogo.png";
-import twitter from "../assets/img/twitterLogo.png";
+import menuRs from "/img/MenuRS.png";
+import tiktok from "/img/tiktokLogo.png";
+import facebook from "/img/facebookLogo.png";
+import instagram from "/img/instagramLogo.png";
+import twitter from "/img/twitterLogo.png";
 
 function BtnSocial() {
   const [showButtons, setShowButtons] = useState(false);
