@@ -12,11 +12,13 @@ export default {
         200: '#d9cfc6',
         300: '#76694e'
       },
-      'white': '#f0ece9',
+      'white': '#2ADBD8',
       'pink': '#f1dcdb',
       'yellow': '#ede9d0',
       'blue': '#d5cfd9',
-      'green': '#cddecc'
+      'green': '#cddecc',
+      'black': '#333'
+      
     },
     fontFamily: {
       'bellota': ['Bellota Text', 'cursive']
