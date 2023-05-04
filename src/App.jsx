@@ -1,8 +1,9 @@
-import imgmethod from './assets/img/imgWelness.png'
-import imgtesting from './assets/img/imgPruebas.png'
+import imgtesting from '/img/imgPruebas.png'
+import imgmethod from '/img/imgWelness.png'
 import Modal from 'react-modal'; 
 import { useEffect, useRef, useState } from 'react'
 import './index.css';
+
 
 
 
@@ -174,7 +175,7 @@ function Section3(){
   }
     
   return(
-    <section id="aboutus" className="bg-brown-200 flex flex-col justify-evenly w-full   ">
+    <section id="aboutus" className="bg-brown-100 flex flex-col justify-evenly w-full   ">
       <div className=' ´ font-semibold text-center  text-brown-300 my-[5rem] mx-[2rem] md:my-[12rem] md:mx-[7rem] lg:my-[17rem] lg:mx-[1rem] items-start text-xl md:text-2xl lg:text-3xl  lg:px-[5rem]'>
       
          <h1 className='lg:text-5xl mb-[2rem] mx-[3rem] uppercase mt-[3rem] ' >sobre nosotros</h1>
