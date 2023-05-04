@@ -2,16 +2,16 @@ import whatsapp from "/img/whatsappLogo.png";
 import icono from "/img/WellnessLogo.png";
 
 import { Form, Formik } from "formik";
-import { useState } from "react";
 import { createDataRequest } from "../api/datas.api.js";
 
 function Formulario() {
-  const [hover, setHover] = useState(true);
   const style =
     "focus:outline-none outline-none focus:shadow-none shadow-lg bg-brown-100 py-1 px-2 rounded-lg transition-all duration-300";
   return (
     <>
       <section>
+        <h1>Tienes alguna duda?</h1>
+        <h2>Contacta con nosotros!</h2>
         <div className=" bg-brown-200 h-screen w-full flex justify-center items-center flex-row">
           <div className=" flex flex-row h-[90%] w-[90%] justify-center items-center gap-[20rem]">
             <Formik
@@ -70,30 +70,6 @@ function Formulario() {
                           onChange={handleChange}
                           value={values.number}
                         />
-                      </fieldset>
-
-                      <fieldset className="flex flex-row gap-16 text-center">
-                        <div className="flex flex-col">
-                          <label>Fecha</label>
-                          <input
-                            className={style}
-                            type="date"
-                            name="date"
-                            onChange={handleChange}
-                            value={values.date}
-                          />
-                        </div>
-
-                        <div className="flex flex-col">
-                          <label>Hora</label>
-                          <input
-                            className={style}
-                            type="time"
-                            name="time"
-                            onChange={handleChange}
-                            value={values.time}
-                          />
-                        </div>
                       </fieldset>
                     </div>
 
