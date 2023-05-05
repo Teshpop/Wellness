@@ -56,28 +56,28 @@ function Section1() {
   return (
     <div
       ref={divRef}
-      className=" relative bg-brown-100 w-full text-brown-300 flex flex-col md:flex-row "
+      className=" relative  bg-brown-100  text-brown-300 flex flex-col md:flex-row "
     >
-      <section id="ourmethod">
-        <div className="my-8 lg:flex-row flex flex-col justify-evenly items-center ">
+      <section id="ourmethod" className="w-full">
+        <div className="my-8 lg:flex-row flex flex-col w-full justify-evenly md:items-center lg:items-start ">
           <div
-            className={`relative left-0 ${imgPosition}  transition-all duration-500 ease-out lg:w-1/2`}
+            className={`relative left-0 ${imgPosition} lg:ml-[2rem] transition-all duration-500 ease-out lg:w-1/2`}
           >
             <img
               src={imgmethod}
               alt="welness place"
-              className={`flex mt-[10rem] h-[22rem] md:mx-[13rem] md:w-[25rem] md:h-[25rem] lg:mx-[5rem] xl:mx-full lg:w-[35rem] lg:h-full rounded-3xl `}
+              className={`flex mt-[10rem] h-[22rem] mx-auto  md:w-[25rem] md:h-[25rem] lg:mx-auto lg:w-[35rem]  lg:h-auto  rounded-3xl `}
             />
           </div>
 
           <div
-            className={`relative right-0 ${textPosition} transition-all duration-500 md:ease-out flex flex-col justify-center font-semibold my-[3rem]  mt-[2rem]  md:mx-[13rem] md:w-[25rem] lg:mt-[10rem] lg:mx-full lg:w-[30rem] `}
+            className={`relative  right-0 ${textPosition} transition-all duration-500 md:ease-out flex flex-col justify-center mx-[2rem] md:mx-auto font-semibold my-[3rem] lg:mr-[8rem] mt-[2rem]   md:w-[25rem]  lg:mt-[10rem]  lg:w-[45rem] `}
           >
-            <h1 className=" lg:text-3xl mb-[2rem] mt-auto  underline underline-offset-8 decoration-brown-300 text-xl md:text-2xl  uppercase text-center">
-              nuestro metodo
+            <h1 className=" lg:text-3xl  lg:mx-[4rem] mb-[2rem] mt-auto  underline underline-offset-8 decoration-brown-300 text-xl md:text-2xl  uppercase text-center">
+              Nuestro Metodo
             </h1>
 
-            <p className=" mx-[3rem] md:text-xl lg:text-xl lg:mb-[4rem] sm:text-sm  text-justify">
+            <p className="   md:text-xl lg:text-xl lg:mb-[4rem] lg:mx-[4rem] mx-[2rem] sm:text-sm  text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
               totam quas nesciunt adipisci voluptates, reprehenderit culpa eum
               excepturi perferendis explicabo velit earum vel. Eius voluptates
