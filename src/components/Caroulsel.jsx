@@ -1,25 +1,33 @@
-function Caroulsel({ id, color, text, img, title, txtSize }) {
+import Carousel from "react-spring-3d-carousel";
+import { useState, useEffect } from "react";
+import { config } from "react-spring";
+
+function Caroulsel(props) {
+  const table = props.cards.map((element, index) => {
+    return { ...element, onClick: () => setGoToSlide(index) };
+  });
+
+  const [offsetRadius, setOffsetRadius] = useState(4);
+  const [showArrows, setShowArrows] = useState(false);
+  const [goToSlide, setGoToSlide] = useState(null);
+  const [cards] = useState(table);
+
+  useEffect(() => {
+    setOffsetRadius(props.offset);
+    setShowArrows(props.showArrows);
+  }, [props.offset, props.showArrows]);
+
   return (
     <>
-      <article
-        id={id}
-        className={`flex-none rounded-2xl drop-shadow-md snap-center w-[90%] lg:w-[40%] ${color}`}
-      >
-        <div className="flex flex-col w-full h-full items-center gap-8 py-9">
-          <div className="flex flex-row justify-center items-center gap-7">
-            <h2 className="uppercase text-lg">{title}</h2>
-            <img
-              src={img}
-              alt="Imagen Prueba"
-              className=" rounded-full 
-              h-16 w-16 "
-            />
-          </div>
-          <div className="w-[80%] text-justify">
-            <p className={txtSize}>{text}</p>
-          </div>
-        </div>
-      </article>
+      <div className="h-full w-full">
+        <Carousel
+          slides={cards}
+          goToSlide={goToSlide}
+          offsetRadius={offsetRadius}
+          showNavigation={showArrows}
+          animationConfig={config.gentle}
+        />
+      </div>
     </>
   );
 }

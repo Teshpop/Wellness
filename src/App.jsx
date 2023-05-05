@@ -3,12 +3,14 @@ import Footer from "./components/Footer.jsx";
 import BtnSocial from "./components/BtnSocial.jsx";
 import Header from "./components/Header.jsx";
 import Carousel from "./components/Caroulsel.jsx";
+import Card from "./components/Card.jsx";
 
 import portada from "/img/Portada.png";
 import imgtesting from "/img/imgPruebas.png";
 import imgmethod from "/img/imgWelness.png";
 
 import { useEffect, useRef, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 import "./index.css";
 
@@ -124,126 +126,142 @@ function Section1() {
 }
 
 function Section2() {
-  function Button({ id, color }) {
-    return (
-      <>
-        <a rel="notfollow" href={id}>
-          <div
-            className={`${color} rounded-full h-10 w-10 shadow-md cursor-pointer hover:shadow-none transition-all duration-300 `}
-          ></div>
-        </a>
-      </>
-    );
-  }
+  let cards = [
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen={imgtesting}
+          title={"Yoga de los 7 chakras"}
+          text={
+            "Es una Shadana (esfuerzo espiritual hacia una meta) de una semana de duración enfocada en despertar la energía Shakti kundalini con el fin de liberarnos de todo obstáculo que nos impide avanzar y alcanzar la felicidad plena. Durante una semana; con cada práctica de yoga diaria liberaremos la energía de uno de los 7 chakras, trabajando e integrando conscientemente: intención, visualización, respiración, mudras, asanas, energía sagrada y mantras de cada centro energético. 7 prácticas de yoga, 7 chakras, 7 yantras, 7 mantras, 7 pranas, 7 mudras, 7 animales de poder, 7 karmas (Obstáculos a superar) y 7 Avatares (Dioses encarnados o energías sagradas para trascender cada obstáculo). "
+          }
+          color={"bg-white"}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen={imgtesting}
+          title={"Ceremonia de cacao"}
+          text={
+            "La ceremonia del cacao es un ritual originario de los mayas que se ha extendido a otras culturas indígenas de América Central y del Sur. Se prepara y se consume una bebida hecha con cacao puro y especias en una ceremonia de agradecimiento y apertura del corazón. Se crea un altar sagrado con ofrendas a la tierra y a las energías presentes en ese día. Durante la ceremonia se cantan mantras y se toca música con tambor chamánico para elevar la vibración. El cacao es una planta sagrada que te ayuda a liberar emociones y a sentir paz y alegría. Además, tiene muchas propiedades buenas para la salud, como la mayor fuente de antioxidantes y la presencia de Teobromina, un alcaloide saludable que tiene efectos mucho más suaves y duraderos que la cafeína. "
+          }
+          color={"bg-blue"}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen={imgtesting}
+          title={"Ritual de florecimiento en el Mar"}
+          text={
+            "Un baño de florecimiento es un ritual en el río, mar o en la montaña para ayudar a limpiar y purificar tu cuerpo y mente. Seleccionamos con mimo flores exóticas, pétalos y plantas silvestres medicinales con las que regaremos tu aura. Te sentirás como una divinidad. Sentirás como un torrente de luz perfumada diluye y transmuta energías negativas, estrés y tensión acumulados en tu cuerpo y mente, y atrae energías positivas de armonía y equilibrio. El ritual sagrado de florecimiento inca es una bendición que activa tu destino y te recarga de energía cósmica espiritual. Conecta con los grandes espíritus y atrae vibraciones positivas."
+          }
+          color={"bg-yellow"}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen={imgtesting}
+          title={"Ritual de Luna nueva "}
+          text={
+            "Un ritual de luna es una práctica espiritual que se realiza con las fases de la luna. Conectamos con la energía de la luna y aprovechamos su poder para llevar a cabo una intención específica. En los rituales de luna nueva sembramos nuevas intenciones y se establecen nuevos propósitos y en un ritual de luna llena liberamos patrones negativos y celebramos nuestros logros. En los rituales de luna incluimos diversas prácticas, la meditación, el canto, la danza, la creación de altares, velas o incienso, entre otros. Cada fase de la luna requiere diferentes prácticas y herramientas, dependiendo de la intención del ritual."
+          }
+          color={"bg-green"}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen={imgtesting}
+          title={"Be energy/ Sé energía / Chi kung . Tai Chi "}
+          text={
+            "La práctica que te propongo es una experiencia mística que busca la armonización de tu cuerpo, mente y espíritu a través de antiguas técnicas orientales como el Chi Kung y el Tai Chi. A través de la conexión con la energía Chi o prana, se busca sanar aspectos vitales determinados a nivel espiritual, energético, mental, emocional y físico. En esta práctica, aprenderás a encontrar tu centro, a estar presente, a ser fluido y expresivo en tus movimientos, a concentrar y dirigir tu energía y a contrarrestar y redirigir las energías adversas fuera de tu campo energético de acción. Al final de la sesión, experimentarás una sensación de paz y armonía, y habrás establecido un vínculo más fuerte con tu propia esencia divina."
+          }
+          color={"bg-pink"}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen={imgtesting}
+          title={"Be water/ Se agua / Chi kung . Tai Chi acuático"}
+          text={
+            "En esta práctica de Be water/Se agua/Chi Kung y Tai Chi acuático, nos sumergimos en la sabiduría ancestral del elemento sagrado del agua, conectándonos con la energía universal y aprendiendo a fluir como ella. Nos liberamos de las limitaciones que nos pesan y nos conectamos con la armonía del universo, elevando nuestra energía a niveles más elevados de consciencia. A través de la densidad, pesadez y resistencia fluida del agua, interiorizamos los movimientos y los entendemos mejor dentro de nuestro campo energético y físico, mientras activamos la circulación sanguínea y fortalecemos los músculos, tendones y articulaciones suavemente. Es una experiencia de purificación y unión con la naturaleza que nos permite sanar y crecer espiritualmente."
+          }
+          color={"bg-green"}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen={imgtesting}
+          title={
+            "Conexión Reiki / El arte de dar y recibir para manifestar Luz"
+          }
+          text={
+            "Este es un ritual sagrado de conexión con la energía universal y la manifestación de la luz en la materia. En él, nos reunimos para practicar la auto-realización y compartir energía con otros seres, multiplicando el poder del Reiki por el número de participantes. El ritual comienza con una meditación en silencio y un compromiso de respeto hacia todo y todos. Luego, cada participante recibe una iniciación REIJU para transmitir la capacidad de curación a los demás. A través de prácticas grupales, todos dan y reciben Reiki del resto, moviendo la energía con música en círculos que avanzan y retroceden. Al final, cerramos la sesión en un gran círculo y compartimos nuestras experiencias. Este ritual es una experiencia de unión con la energía universal y de elevación de la consciencia."
+          }
+          color={"bg-yellow"}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen={imgtesting}
+          title={"Extatic dance / La Danza de la Unidad"}
+          text={
+            "La danza en comunidad es un portal a otras dimensiones, donde se fusionan lo divino y lo terrenal, lo ancestral y lo moderno, lo personal y lo colectivo. Es una ceremonia de alquimia sagrada donde cada cuerpo es un templo y cada movimiento es una oración. A través de los sonidos sagrados del mundo, nos conectamos con nuestro ser más profundo y con los demás, en un ritual de danza extática que nos permite sanar, empatizar, celebrar y abrir nuestro corazón a la unión. Bailamos en silencio, dándole la voz a nuestra energía y explorando las posibilidades creativas de nuestro cuerpo, descubriendo así nuestra verdadera esencia y expresándose en la alegría eterna e ilimitada de la unidad."
+          }
+          color={"bg-blue"}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen={imgtesting}
+          title={"Ritual de creatividad / Eres lo creado y el creador"}
+          text={
+            "Sumérgete en el ritual de creatividad para descubrir el poder sagrado creador que hay en ti. Visualiza, manifiesta y representa tu avatar, creando tus símbolos de poder y conectándolos con la energía positiva de manifestación en tu corazón y cada uno de tus átomos. Eres lo creado y el creador, ohm. Eres el aliento que brota en el vacío, la respiración del bosque y la canción del viento en el acantilado. Eres Brahma y Saraswati, el adolescente eterno y la magia de la media noche. Pletóric@ de verano, derramas tu abundancia y sostienes la vida. Eres alimento e inspiración natural, reinas en las mareas y las flores. Eres Krishna y Rada. Eres el silencio meditativo del ocaso, la danza cósmica de los ciclos, el fuego que purifica y el agua del tiempo que todo lo pule. Eres Shiva y Parvati, el alquimista de tu vida que despierta, remueve la tierra, destruye lo que ya no sirve y planta la nueva semilla para ver sus sueños crecer hechos realidad. En ti está la creación y el creador, ohm."
+          }
+          color={"bg-pink"}
+        />
+      ),
+    },
+  ];
 
   return (
     <section id="Programs">
-      <div className="flex flex-col bg-brown-200 justify-center w-full items-center h-screen gap-5">
-        <h1 className="uppercase text-3xl md:text-4xl lg:text-5xl">
-          programas
-        </h1>
-        <div className="flex flex-row overflow-hidden hover:overflow-scroll gap-5 lg:gap-[10rem] px-4 lg: snap-x w-full h-[70%] py-10">
-          <Carousel
-            id={"1"}
-            color={"bg-white"}
-            text={
-              "Es una Shadana (esfuerzo espiritual hacia una meta) de una semana de duración enfocada en despertar la energía Shakti kundalini con el fin de liberarnos de todo obstáculo que nos impide avanzar y alcanzar la felicidad plena. Durante una semana; con cada práctica de yoga diaria liberaremos la energía de uno de los 7 chakras, trabajando e integrando conscientemente: intención, visualización, respiración, mudras, asanas, energía sagrada y mantras de cada centro energético. 7 prácticas de yoga, 7 chakras, 7 yantras, 7 mantras, 7 pranas, 7 mudras, 7 animales de poder, 7 karmas (Obstáculos a superar) y 7 Avatares (Dioses encarnados o energías sagradas para trascender cada obstáculo)."
-            }
-            img={imgtesting}
-            title={"Yoga de los 7 chakras"}
-            txtSize={"text-lg"}
-          />
-          <Carousel
-            id={"2"}
-            color={"bg-blue"}
-            text={
-              "Una ceremonia de cacao es el Ritual original Maya que posteriormente se extendió a otras culturas indígenas de América Central y del Sur, donde el cacao es originario. En esta ceremonia, se prepara y se consume una bebida hecha con cacao puro, generalmente mezclado con especias y otros ingredientes naturales. La ceremonia empieza en el momento en el que la facilitadora prepara el cacao con mucho amor. Es una celebración para dar gracias y abrir el corazón con la planta sagrada del cacao. Se prepara un altar sagrado con ofrendas a la tierra y a las energías presentes en ese día. Cada día tiene una energía especial en la cosmología maya, y está energía está presente durante la ceremonia apoyando el propósito del ritual. Unimos nuestros corazones en círculo alrededor del altar donde colocaremos con amor nuestras ofrendas (Flores, fruta, cualquier cosa que sea noble, bella o importante para nosotros), cantaremos música medicina y mantras acompañados de tambor chamánico y juntos elevaremos la vibración de nuestros caminos y de la tierra. Si tú también tocas algún instrumento puedes traerlo para honrar la ceremonia con tu arte. 🌱 ☕ ¿y qué es el cacao? El cacao era para los mayas y los aztecas, el alimento de los dioses, es una planta sagrada que se toma en forma de bebida caliente, se hace con cacao puro 100% orgánico y una infusión de especias. No lleva leche. Viene de la selva de México, está cultivado por una comunidad indígena y en su preparación se le canta y reza. Este cacao no tiene comparación al cacao del supermercado, os contaré la diferencia desde su producción. A nivel energético, es una planta sagrada que te abre el corazón, que te ayuda a liberar emociones, calmandote. Sentirás mucha paz y alegría. A nivel físico ayuda a que la sangre fluya más y sentirás apertura y relajación. Tiene muchísimas propiedades buenas para la salud, para el cerebro y el corazón, posee la mayor fuente de antioxidantes, es un sustitutivo saludable al café, porque posee Teobromina, un alcaloide presente en el cacao que tiene efectos sobre el organismo mucho más suaves, duraderos y saludables que la cafeína."
-            }
-            img={imgtesting}
-            title={"Ceremonia de cacao"}
-            txtSize={"text-sm"}
-          />
-          <Carousel
-            id={"3"}
-            color={"bg-yellow"}
-            text={
-              "Un baño de florecimiento es un ritual en el río, mar o en la montaña para ayudar a limpiar y purificar tu cuerpo y mente. Seleccionamos con mimo flores exóticas, pétalos y plantas silvestres medicinales con las que regaremos tu aura. Te sentirás como una divinidad. Sentirás como un torrente de luz perfumada diluye y transmuta energías negativas, estrés y tensión acumulados en tu cuerpo y mente, y atrae energías positivas de armonía y equilibrio. El ritual sagrado de florecimiento inca es una bendición que activa tu destino y te recarga de energía cósmica espiritual. Conecta con los grandes espíritus y atrae vibraciones positivas. "
-            }
-            img={imgtesting}
-            title={"Ritual de florecimiento en el Mar"}
-            txtSize={"text-lg"}
-          />
-          <Carousel
-            id={"4"}
-            color={"bg-green"}
-            text={
-              "Un ritual de luna es una práctica espiritual que se realiza con las fases de la luna. Conectamos con la energía de la luna y aprovechamos su poder para llevar a cabo una intención específica. En los rituales de luna nueva sembramos nuevas intenciones y se establecen nuevos propósitos y en un ritual de luna llena liberamos patrones negativos y celebramos nuestros logros. En los rituales de luna incluimos diversas prácticas, la meditación, el canto, la danza, la creación de altares, velas o incienso, entre otros. Cada fase de la luna requiere diferentes prácticas y herramientas, dependiendo de la intención del ritual."
-            }
-            img={imgtesting}
-            title={"Ritual de Luna nueva"}
-            txtSize={"text-lg"}
-          />
-          <Carousel
-            id={"5"}
-            color={"bg-pink"}
-            text={
-              "Comenzamos con un calentamiento y abriendo la sesión de Chi Kung (una serie de técnicas orientadas a liberar, aumentar y equilibrar el flujo de energía Chi o prana), posteriormente analizaremos y practicaremos un ejercicio de chi kung enfocado a sanar un aspecto vital determinado a nivel espiritual, energético, mental, emocional y físico. La segunda parte de la sesión consiste en una práctica de Tai Chi estilo Yang (Kung fu interno chino de la corte imperial), en la que aprenderemos a enraizar, estar presentes, auto observarnos, concentrar, dirigir y soltar nuestra energía, encontrar nuestro centro y no perderlo, Relajar nuestro cuerpo y mente, ser fluidos y expresivos en nuestros movimientos, mirar de frente a la vida y contrarrestar y redirigir las energías adversas fuera de nuestro campo energético de acción. La sesión se cierra con algunos ejercicios con pelotas individuales y por parejas y el mismo saludo ritual con que se abre."
-            }
-            img={imgtesting}
-            title={"Be energy/ Sé energía / Chi kung . Tai Chi "}
-            txtSize={"text-lg"}
-          />
-          <Carousel
-            id={"6"}
-            color={"bg-green"}
-            text={
-              "Este entrenamiento lo cree hace años para mí, llevando la práctica a la piscina y el mar. Es un aprendizaje profundo sobre la fluidez y el espacio que ocupamos en cada momento y como interactuamos con él. El agua proporciona una densidad, una pesadez y una resistencia fluida que hace que interioricemos conscientemente los movimientos y los entendamos mejor dentro de nuestro campo energético y físico, además de activar la circulación sanguínea y fortalecer músculos, tendones y articulaciones amable y suavemente. "
-            }
-            img={imgtesting}
-            title={"Be water/ Se agua / Chi kung . Tai Chi acuático"}
-            txtSize={"text-lg"}
-          />
-          <Carousel
-            id={"7"}
-            color={"bg-yellow"}
-            text={"Lorem impus"}
-            img={imgtesting}
-            title={
-              "Conexión Reiki / El arte de dar y recibir para manifestar Luz"
-            }
-          />
-          <Carousel
-            id={"8"}
-            color={"bg-blue"}
-            text={
-              "El baile y la música en comunidad es un ritual tan antiguo como el ser humano, cuando entre las tribus se congregaban para compartir, sanar, empatizar, celebrar, conectar y abrir el corazón. Durante 2 horas vibramos con los sonidos sagrados del mundo, conectaremos con nosotros mismos y el resto de los participantes en un ritual de danza, en silencio, dándole la voz a nuestra energía y descubriendo las posibilidades creativas de nuestro cuerpo y nuestro verdadero ser, expresándose en la alegría eterna e ilimitada de la unidad. "
-            }
-            img={imgtesting}
-            title={"Extatic dance / La Danza de la Unidad"}
-            txtSize={"text-lg"}
-          />
-          <Carousel
-            id={"9"}
-            color={"bg-white"}
-            text={
-              "Descubre el poder sagrado creador en ti. Visualiza, manifiesta y representa tu avatar, crea tus símbolos de poder y conéctalos con tu energía positiva de manifestación (Dharma, acción sagrada, propósito vital) en tu corazón y cada uno de tus átomos. Ohm Eres el aliento, brotando en el vacío de la cueva, la respiración del bosque y la canción del viento en el acantilado, el rocío y el primer rayo de luz, el niño recién nacido que va a descubrir el universo mientras lo crea jugando, eres Brahma, eres Saraswati. Eres el adolescente eterno, el calor del medio día y la magia de la media noche, pletórico de primavera, derramas tu abundancia, el misterio de la Luna y la alegría del sol, sostienes la vida, eres alimento e inspiración natural, reinas en las mareas y las flores, eres Krishna, eres Rada. Eres el silencio meditativo del ocaso, la danza cósmica de los ciclos, el fuego que purifica, el agua del tiempo que todo lo pule, el alquimista de tu vida, aquel que despierta, remueve la tierra, destruye lo que ya no sirve y planta la nueva semilla para ver sus sueños crecer hechos realidad. Eres Shiva, eres Parvati. Tu eres Yo soy, el creador y la creación. Ohm"
-            }
-            img={imgtesting}
-            title={"Ritual de creatividad / Eres lo creado y el creador"}
-            txtSize={"lg:text-[1.1rem]"}
-          />
+      <div className="h-screen w-screen bg-brown-200 flex justify-center items-center flex-col">
+        <div className="flex flex-col text-center pt-12">
+          <h1 className="uppercase text-3xl md:text-4xl lg:text-5xl">
+            programas
+          </h1>
+          <h3 className="uppercase text-base">
+            ¡ is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s,!
+          </h3>
         </div>
-        <div className="flex flex-row gap-5">
-          <Button id={"#1"} color={"bg-white"} />
-          <Button id={"#2"} color={"bg-blue"} />
-          <Button id={"#3"} color={"bg-yellow"} />
-          <Button id={"#4"} color={"bg-green"} />
-          <Button id={"#5"} color={"bg-pink"} />
-          <Button id={"#6"} color={"bg-green"} />
-          <Button id={"#7"} color={"bg-yellow"} />
-          <Button id={"#8"} color={"bg-blue"} />
-          <Button id={"#9"} color={"bg-white"} />
-        </div>
+        <Carousel cards={cards} offset={200} showArrows={false} />
       </div>
     </section>
   );
@@ -318,11 +336,7 @@ function Section3() {
 
   return (
     <section
-<<<<<<< HEAD
       id="AboutUs"
-=======
-      id="About s"
->>>>>>> Fabian
       className="bg-brown-100 flex flex-col justify-evenly w-full   "
     >
       <div className=" ´ font-semibold text-center   text-brown-300 sm:my-[5rem] sm:mx-[2rem] md:my-[12rem] md:mx-[7rem] lg:my-[17rem] lg:mx-[1rem] items-start text-xl md:text-2xl lg:text-3xl  lg:px-[5rem]">
@@ -369,11 +383,7 @@ function Section3() {
                   imgbio={imgmethod}
                   description={"Lorem"}
                 />
-<<<<<<< HEAD
-                <p className="uppercase">Nombre</p>
-=======
                 <h2 className="uppercase">nombre</h2>
->>>>>>> Fabian
               </div>
             </div>
           </div>
