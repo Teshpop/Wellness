@@ -2,6 +2,7 @@ import Formulario from "./components/Formulario.jsx";
 import Footer from "./components/Footer.jsx";
 import BtnSocial from "./components/BtnSocial.jsx";
 import Header from "./components/Header.jsx";
+import Carousel from "./components/Caroulsel.jsx";
 
 import portada from "/img/Portada.png";
 import imgtesting from "/img/imgPruebas.png";
@@ -120,32 +121,6 @@ function Section1() {
 }
 
 function Section2() {
-  function Cont({ id, color, text }) {
-    return (
-      <>
-        <article
-          id={id}
-          className={`flex-none rounded-2xl drop-shadow-md snap-center w-[90%] lg:w-[40%] ${color}`}
-        >
-          <div className="flex flex-col w-full h-full items-center gap-8 py-9">
-            <div className="flex flex-row justify-center items-center gap-7">
-              <h2 className="uppercase text-lg">Titulo</h2>
-              <img
-                src={imgtesting}
-                alt="Imagen Prueba"
-                className=" rounded-full 
-              h-16 w-16 "
-              />
-            </div>
-            <div className="w-[80%] text-center">
-              <p>{text}</p>
-            </div>
-          </div>
-        </article>
-      </>
-    );
-  }
-
   function Button({ id, color }) {
     return (
       <>
@@ -165,12 +140,42 @@ function Section2() {
           programas
         </h1>
         <div className="flex flex-row overflow-hidden hover:overflow-scroll gap-5 lg:gap-[10rem] px-4 lg: snap-x w-full h-[70%] py-10">
-          <Cont id={"1"} color={"bg-white"} text={"lorem ipus"} />
-          <Cont id={"2"} color={"bg-blue"} text={"lorem ipus"} />
-          <Cont id={"3"} color={"bg-yellow"} text={"lorem ipus"} />
-          <Cont id={"4"} color={"bg-green"} text={"lorem ipus"} />
-          <Cont id={"5"} color={"bg-pink"} text={"lorem ipus"} />
-          <Cont id={"6"} color={"bg-white"} text={"lorem ipus"} />
+          <Carousel
+            id={"1"}
+            color={"bg-white"}
+            text={"lorem ipus"}
+            img={imgtesting}
+          />
+          <Carousel
+            id={"2"}
+            color={"bg-blue"}
+            text={"lorem ipus"}
+            img={imgtesting}
+          />
+          <Carousel
+            id={"3"}
+            color={"bg-yellow"}
+            text={"lorem ipus"}
+            img={imgtesting}
+          />
+          <Carousel
+            id={"4"}
+            color={"bg-green"}
+            text={"lorem ipus"}
+            img={imgtesting}
+          />
+          <Carousel
+            id={"5"}
+            color={"bg-pink"}
+            text={"lorem ipus"}
+            img={imgtesting}
+          />
+          <Carousel
+            id={"6"}
+            color={"bg-white"}
+            text={"lorem ipus"}
+            img={imgtesting}
+          />
         </div>
         <div className="flex flex-row gap-5">
           <Button id={"#1"} color={"bg-white"} />
