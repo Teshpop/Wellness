@@ -72,10 +72,10 @@ function Header() {
         </a>
         <nav className=" md:flex lg:flex-row md:items-center md:justify-center md:w-full hidden">
           <div className=" flex flex-row justify-evenly w-[95%] text-base lg:text-xl ">
-            <BtnMen title={"Nuestro método"} id={"#"} />
-            <BtnMen title={"Programas"} id={"#programs"} />
-            <BtnMen title={"Sobre Nosotros + Equipo"} id={"#"} />
-            <BtnMen title={"Contacto"} id={"#"} />
+            <BtnMen title={"Nuestro método"} id={"#OurMethods"} />
+            <BtnMen title={"Programas"} id={"#Programs"} />
+            <BtnMen title={"Sobre Nosotros + Equipo"} id={"#AboutUs"} />
+            <BtnMen title={"Contacto"} id={"#Contact"} />
           </div>
         </nav>
         <button

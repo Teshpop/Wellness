@@ -9,7 +9,7 @@ function Formulario() {
     "focus:outline-none outline-none focus:shadow-none shadow-lg bg-brown-100 py-1 px-2 rounded-lg transition-all duration-300";
   return (
     <>
-      <section>
+      <section id="Contact">
         <div className="bg-brown-200 h-screen w-full flex flex-col justify-center items-center">
           <div className="flex flex-col text-center pt-10">
             <h1 className="text-3xl md:text-5xl uppercase">
