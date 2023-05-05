@@ -75,45 +75,47 @@ function Section1() {
   const textPosition =
     scrollDirection === "down"
       ? "translate-x-0 opacity-100"
-      : "translate-x-full opacity-0";
+      : "md:translate-x-full opacity-0 sm:-translate-x-full opacity-0";
 
   return (
     <div
       ref={divRef}
-      className="  relative bg-brown-100 w-full text-brown-300 flex flex-col md:flex-row "
+      className=" relative  bg-brown-100  text-brown-300 flex flex-col md:flex-row "
     >
-      <section
-        id="ourmethod"
-        className="my-8 mx-auto lg:flex-row flex flex-col justify-evenly items-start "
-      >
-        <div className="relative lg:w-1/2 ">
-          <img
-            src={imgmethod}
-            alt="welness place"
-            className={`flex  left-0 ${imgPosition} transition-all duration-500 ease-out mt-[10rem] w-[19rem] h-[19rem] md:mx-[13rem] md:w-[25rem] md:h-[25rem] lg:mx-[5rem] xl:mx-full lg:w-[35rem] lg:h-full rounded-3xl `}
-          />
-        </div>
+      <section id="ourmethod" className="w-full">
+        <div className="my-8 lg:flex-row flex flex-col w-full justify-evenly md:items-center lg:items-start ">
+          <div
+            className={`relative left-0 ${imgPosition} lg:ml-[2rem] transition-all duration-500 ease-out lg:w-1/2`}
+          >
+            <img
+              src={imgmethod}
+              alt="welness place"
+              className={`flex mt-[10rem] h-[22rem] mx-auto  md:w-[25rem] md:h-[25rem] lg:mx-auto lg:w-[35rem]  lg:h-auto  rounded-3xl `}
+            />
+          </div>
 
-        <div
-          className={`relative  right-0 ${textPosition} transition-all duration-500 ease-out flex flex-col justify-center font-semibold my-[3rem] mx-auto mt-[2rem] w-[15rem] md:mx-[13rem] md:w-[25rem] lg:mt-[10rem] lg:mx-full lg:w-[30rem] `}
-        >
-          <h1 className=" lg:text-3xl mb-[2rem] mt-auto  underline underline-offset-8 decoration-brown-300 text-xl md:text-2xl  uppercase text-center">
-            nuestro metodo{" "}
-          </h1>
+          <div
+            className={`relative  right-0 ${textPosition} transition-all duration-500 md:ease-out flex flex-col justify-center mx-[2rem] md:mx-auto font-semibold my-[3rem] lg:mr-[8rem] mt-[2rem]   md:w-[25rem]  lg:mt-[10rem]  lg:w-[45rem] `}
+          >
+            <h1 className=" lg:text-3xl  lg:mx-[4rem] mb-[2rem] mt-auto  underline underline-offset-8 decoration-brown-300 text-xl md:text-2xl  uppercase text-center">
+              Nuestro Metodo
+            </h1>
 
-          <p className=" md:text-xl lg:text-xl lg:mb-[4rem] text-sm  text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi totam
-            quas nesciunt adipisci voluptates, reprehenderit culpa eum excepturi
-            perferendis explicabo velit earum vel. Eius voluptates beatae
-            molestias veniam inventore accusamus! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Nisi totam quas nesciunt adipisci
-            voluptates, reprehenderit culpa eum excepturi perferendis explicabo
-            velit earum vel. Eius voluptates beatae molestias veniam inventore
-            accusamus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Labore repellat, eos quos aspernatur corrupti qui, corporis eius
-            earum odio in quasi magnam voluptates cupiditate optio laudantium
-            impedit blanditiis quisquam consequatur.
-          </p>
+            <p className="   md:text-xl lg:text-xl lg:mb-[4rem] lg:mx-[4rem] mx-[2rem] sm:text-sm  text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              totam quas nesciunt adipisci voluptates, reprehenderit culpa eum
+              excepturi perferendis explicabo velit earum vel. Eius voluptates
+              beatae molestias veniam inventore accusamus! Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Nisi totam quas nesciunt
+              adipisci voluptates, reprehenderit culpa eum excepturi perferendis
+              explicabo velit earum vel. Eius voluptates beatae molestias veniam
+              inventore accusamus! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Labore repellat, eos quos aspernatur corrupti
+              qui, corporis eius earum odio in quasi magnam voluptates
+              cupiditate optio laudantium impedit blanditiis quisquam
+              consequatur.
+            </p>
+          </div>
         </div>
       </section>
     </div>
@@ -191,7 +193,7 @@ function Section2() {
 }
 
 function Section3() {
-  function BioFirst({ nombre, image, descriptiopn }) {
+  function BioFirst({ name, imgbio, description }) {
     const [showMyModal, setShowModal] = useState(false);
 
     const handleOnClose = () => setShowModal(false);
@@ -209,17 +211,17 @@ function Section3() {
           onClick={handleOnClose}
           className=" z-10 fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm flex justify-center items-center"
         >
-          <div className=" ">
+          <div className="">
             <div className="  md:mx-auto md:mb-[2rem] md:mt-[2rem]  md:h-80% md:w-[37rem] lg:w-[60rem] ">
               <div className=" bg-brown-200 bg-opacity-85 rounded-3xl backdrop-blur-50 drop-shadow-lg flex flex-col">
                 <div>
-                  <div className="mx-[2rem] border-b md:h-30% flex flex-row justify-between item-center   p-4">
+                  <div className="sm:mx-[2rem] border-b md:h-30% flex flex-row justify-between item-center   p-4">
                     <img
-                      src={imgtesting}
-                      className="mt-[2rem]  rounded-full h-[5rem] w-[5rem] md:h-[7rem] md:w-[7rem] lg:h-[10rem] lg:w-[10rem] "
+                      src={imgbio}
+                      className="sm:mt-[2rem]  rounded-full h-[5rem] w-[5rem] md:h-[7rem] md:w-[7rem] lg:h-[10rem] lg:w-[10rem] "
                     ></img>
-                    <h2 className="mx-[2rem] mt-[4rem] md:mt-[4rem] lg:mt-[5rem] md:mr-[4rem] md:text-3xl lg:mr-[8rem] lg:text-4xl font-bold">
-                      Jesus Fabian Cortez Perez
+                    <h2 className="sm:mx-[2rem] mt-[2rem] md:mt-[4rem] lg:mt-[5rem] md:mr-[4rem] md:text-3xl lg:mr-[8rem] lg:text-4xl font-bold">
+                      {name}
                     </h2>
                     <button
                       onClick={onClose}
@@ -229,24 +231,9 @@ function Section3() {
                     </button>
                   </div>
                 </div>
-                <div className="p-4 mb-[1rem] mx-auto    justify-center  text-justify">
+                <div className="p-4 sm:mb-[1rem] mx-auto justify-center  text-justify">
                   <p className="mx-[2rem] mt-[1rem] md:text-2xl lg:text-3xl">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eos sed nisi ipsa, voluptate fugiat quo consectetur sit
-                    minus, totam laborum corrupti amet! Similique, consectetur.
-                    Dolorem nemo v oluptate a reiciendis doloribus!
-                  </p>
-                  <p className="mx-[2rem] mt-[1rem] md:text-2xl lg:text-3xl">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eos sed nisi ipsa, voluptate fugiat quo consectetur sit
-                    minus, totam laborum corrupti amet! Similique, consectetur.
-                    Dolorem nemo v oluptate a reiciendis doloribus!
-                  </p>
-                  <p className="mx-[2rem] mt-[1rem] md:text-2xl lg:text-3xl">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eos sed nisi ipsa, voluptate fugiat quo consectetur sit
-                    minus, totam laborum corrupti amet! Similique, consectetur.
-                    Dolorem nemo v oluptate a reiciendis doloribus!
+                    {description}
                   </p>
                 </div>
               </div>
@@ -257,7 +244,7 @@ function Section3() {
     }
     return (
       <div>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl  mx-auto">
           <div className="text-center py-3">
             <button onClick={() => setShowModal(true)}>
               <img
@@ -277,8 +264,8 @@ function Section3() {
       id="aboutus"
       className="bg-brown-100 flex flex-col justify-evenly w-full   "
     >
-      <div className=" ´ font-semibold text-center  text-brown-300 my-[5rem] mx-[2rem] md:my-[12rem] md:mx-[7rem] lg:my-[17rem] lg:mx-[1rem] items-start text-xl md:text-2xl lg:text-3xl  lg:px-[5rem]">
-        <h1 className="lg:text-5xl mb-[2rem] mx-[3rem] uppercase mt-[3rem] ">
+      <div className=" ´ font-semibold text-center   text-brown-300 sm:my-[5rem] sm:mx-[2rem] md:my-[12rem] md:mx-[7rem] lg:my-[17rem] lg:mx-[1rem] items-start text-xl md:text-2xl lg:text-3xl  lg:px-[5rem]">
+        <h1 className="lg:text-5xl mb-[2rem]   mx-[3rem] uppercase mt-[3rem] ">
           sobre nosotros
         </h1>
         <p className="text-sm md:text-lg lg:text-2xl mb-[4rem] mx-[3rem] lg:mx-[6rem]   text-justify ">
@@ -301,17 +288,27 @@ function Section3() {
           <div>
             <div className=" mb-[2rem] border-hidden gap-5 xl:mb-5 items-center flex flex-col xl:flex-row  justify-between">
               <div className="xl:ml-[10rem]">
-                <BioFirst />
+                <BioFirst name={"uno"} imgbio={imgtesting} description={""} />
                 <p className="uppercase">Nombre</p>
               </div>
 
               <div>
-                <BioFirst />
+                <BioFirst
+                  name={"dos"}
+                  imgbio={imgtesting}
+                  description={
+                    "Juego de habilidad que se practica sobre una mesa rectangular cubierta por fieltro verde con un reborde de goma y que consiste en golpear con la punta de un taco una bola, generalmente de marfil, con el fin de que, con el impulso, choque sucesivamente con las otras dos bolas, consiguiendo una carambola; gana la partida el jugador que llega primero a un número de carambolas fijado de antemano."
+                  }
+                />
                 <p className="uppercase"> Nombre</p>
               </div>
               <div className="xl:mr-[10rem]">
-                <BioFirst />
-                <p className="uppercase">nombre</p>
+                <BioFirst
+                  name={"tres"}
+                  imgbio={imgmethod}
+                  description={"Lorem"}
+                />
+                <p className="uppercase">Nombre</p>
               </div>
             </div>
           </div>
