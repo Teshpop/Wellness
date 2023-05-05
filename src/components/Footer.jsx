@@ -26,10 +26,6 @@ function Footer() {
         <h2 className="uppercase">Enlaces</h2>
         <div className="flex text-center flex-col md:flex-row gap-3 md:gap-16">
           <Button link={"https://www.flaticon.es/"} title={"Iconos"} />
-          <Button
-            link={"mailto:Tello.3810@outlook.com"}
-            title={"Desarrollador"}
-          />
         </div>
       </div>
     </>
