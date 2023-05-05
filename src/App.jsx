@@ -56,28 +56,29 @@ function Section1() {
   return (
     <div
       ref={divRef}
+      id="OurMethods"
       className=" relative  bg-brown-100  text-brown-300 flex flex-col md:flex-row "
     >
       <section id="ourmethod" className="w-full">
         <div className="my-8 lg:flex-row flex flex-col w-full justify-evenly md:items-center lg:items-start ">
           <div
-            className={`relative left-0 ${imgPosition} lg:ml-[2rem] transition-all duration-500 ease-out lg:w-1/2`}
+            className={`relative left-0 ${imgPosition}  lg:ml-[2rem] transition-all duration-500 ease-out lg:w-1/2`}
           >
             <img
               src={imgmethod}
               alt="welness place"
-              className={`flex mt-[10rem] h-[22rem] mx-auto  md:w-[25rem] md:h-[25rem] lg:mx-auto lg:w-[35rem]  lg:h-auto  rounded-3xl `}
+              className={`flex mt-[10rem] h-[20rem] mx-auto md:w-[25rem] md:h-[25rem] lg:mx-auto lg:w-[35rem]  lg:h-auto  rounded-3xl `}
             />
           </div>
 
           <div
-            className={`relative  right-0 ${textPosition} transition-all duration-500 md:ease-out flex flex-col justify-center mx-[2rem] md:mx-auto font-semibold my-[3rem] lg:mr-[8rem] mt-[2rem]   md:w-[25rem]  lg:mt-[10rem]  lg:w-[45rem] `}
+            className={`relative  right-0 ${textPosition} transition-all duration-500 md:ease-out flex flex-col justify-center mx-[2rem] md:mx-auto font-semibold my-[3rem] lg:mr-[8rem] mt-[2rem]   md:w-[49rem]  lg:mt-[10rem]  lg:w-[45rem] `}
           >
-            <h1 className=" lg:text-3xl  lg:mx-[4rem] mb-[2rem] mt-auto  underline underline-offset-8 decoration-brown-300 text-xl md:text-2xl  uppercase text-center">
+            <h1 className=" lg:text-4xl  lg:mx-[4rem] mb-[2rem] mt-auto  underline underline-offset-8 decoration-brown-300 text-2xl md:text-4xl  uppercase text-center">
               Nuestro Metodo
             </h1>
 
-            <p className="   md:text-xl lg:text-xl lg:mb-[4rem] lg:mx-[4rem] mx-[2rem] sm:text-sm  text-justify">
+            <p className=" md:text-xl lg:text-xl lg:mb-[4rem] mx-[2rem] lg:mx-[4rem] md:mx-[4rem] text-lg  text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
               totam quas nesciunt adipisci voluptates, reprehenderit culpa eum
               excepturi perferendis explicabo velit earum vel. Eius voluptates
@@ -175,14 +176,14 @@ function Section3() {
 
   return (
     <section
-      id="aboutus"
+      id="About s"
       className="bg-brown-100 flex flex-col justify-evenly w-full   "
     >
       <div className=" ´ font-semibold text-center   text-brown-300 sm:my-[5rem] sm:mx-[2rem] md:my-[12rem] md:mx-[7rem] lg:my-[17rem] lg:mx-[1rem] items-start text-xl md:text-2xl lg:text-3xl  lg:px-[5rem]">
-        <h1 className="lg:text-5xl mb-[2rem]   mx-[3rem] uppercase mt-[3rem] ">
+        <h1 className="lg:text-5xl md:text-4xl  text-3xl mb-[2rem]   mx-[3rem] uppercase mt-[3rem] ">
           sobre nosotros
         </h1>
-        <p className="text-sm md:text-lg lg:text-2xl mb-[4rem] mx-[3rem] lg:mx-[6rem]   text-justify ">
+        <p className="text-lg md:text-lg lg:text-2xl mb-[4rem] mx-[3rem] lg:mx-[6rem]   text-justify ">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
           animi voluptates, quasi cum expedita obcaecati inventore ad enim iure
           quas. Iste nam doloribus maiores fugit repellat quis dicta
@@ -195,15 +196,15 @@ function Section3() {
           nam, sequi laudantium est earum? Doloribus possimus nisi itaque.
         </p>
         <div>
-          <h1 className="pb-[2rem] lg:text-4xl xl:text-5xl px-full uppercase">
-            Nuestros Profecionales
+          <h1 className="pb-[2rem] text-3xl md:text-4xl lg:text-5xl px-full uppercase">
+            Nuestros Profesionales
           </h1>
 
           <div>
             <div className=" mb-[2rem] border-hidden gap-5 xl:mb-5 items-center flex flex-col xl:flex-row  justify-between">
               <div className="xl:ml-[10rem]">
                 <BioFirst name={"uno"} imgbio={imgtesting} description={""} />
-                <p className="uppercase">Nombre</p>
+                <h2 className="uppercase">Nombre</h2>
               </div>
 
               <div>
@@ -214,7 +215,7 @@ function Section3() {
                     "Juego de habilidad que se practica sobre una mesa rectangular cubierta por fieltro verde con un reborde de goma y que consiste en golpear con la punta de un taco una bola, generalmente de marfil, con el fin de que, con el impulso, choque sucesivamente con las otras dos bolas, consiguiendo una carambola; gana la partida el jugador que llega primero a un número de carambolas fijado de antemano."
                   }
                 />
-                <p className="uppercase"> Nombre</p>
+                <h2 className="uppercase"> Nombre</h2>
               </div>
               <div className="xl:mr-[10rem]">
                 <BioFirst
@@ -222,7 +223,7 @@ function Section3() {
                   imgbio={imgmethod}
                   description={"Lorem"}
                 />
-                <p className="uppercase"></p>
+                <h2 className="uppercase">nombre</h2>
               </div>
             </div>
           </div>
