@@ -23,27 +23,12 @@ function Footer() {
   return (
     <>
       <div className=" h-32 bg-brown-100 justify-center items-center flex flex-col text-2xl gap-2 ">
-        <h2 className="uppercase">Iconos</h2>
-        <div className="flex flex-row gap-16">
+        <h2 className="uppercase">Enlaces</h2>
+        <div className="flex text-center flex-col md:flex-row gap-3 md:gap-16">
+          <Button link={"https://www.flaticon.es/"} title={"Iconos"} />
           <Button
-            link={"https://www.flaticon.es/iconos-gratis/whatsapp"}
-            title={"Icono WhatsApp"}
-          />
-          <Button
-            link={"https://www.flaticon.es/iconos-gratis/facebook"}
-            title={"Icono Facebook"}
-          />
-          <Button
-            link={"https://www.flaticon.es/iconos-gratis/instagram"}
-            title={"Icono Instagram"}
-          />
-          <Button
-            link={"https://www.flaticon.es/iconos-gratis/logotipo-de-twitter"}
-            title={"Icono Twitter"}
-          />
-          <Button
-            link={"https://www.flaticon.es/iconos-gratis/tik-tok"}
-            title={"Icono TikTok"}
+            link={"mailto:Tello.3810@outlook.com"}
+            title={"Desarrollador"}
           />
         </div>
       </div>
