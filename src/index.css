@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.modal{
-background-color:rgba(0, 0, 0, .5) !important;
+.modal {
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
-.overlay{
-background-color: aquamarine !important;
+.overlay {
+  background-color: aquamarine !important;
 }

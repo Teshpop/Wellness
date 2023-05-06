@@ -19,7 +19,7 @@ function Caroulsel(props) {
 
   return (
     <>
-      <div className="h-full w-full">
+      <div className="h-full w-full overflow-hidden">
         <Carousel
           slides={cards}
           goToSlide={goToSlide}
