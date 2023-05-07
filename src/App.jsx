@@ -26,10 +26,9 @@ function Section0() {
           <h1 className=" text-4xl md:text-5xl lg:text-6xl uppercase ">
             nombre
           </h1>
-          <div className=" w-[35%] md:w-[25%] ">
-            <p className=" text-base md:text-xl lg:text-3xl text-center ">
-              "La clave para una vida saludable y equilibrada es encontrar la
-              armonia entre la mente, el cuerpo y el espiritu."
+          <div className=" w-[35%] md:w-[70%] ">
+            <p className=" text-lg md:text-2xl lg:text-4xl text-center ">
+              "Conecta con tu esencia y renueva tu energía"
             </p>
           </div>
         </div>
@@ -100,23 +99,15 @@ function Section1() {
           <div
             className={`relative  right-0 ${textPosition} transition-all duration-500 md:ease-out flex flex-col justify-center mx-[2rem] md:mx-auto font-semibold my-[3rem] lg:mr-[8rem] mt-[2rem]   md:w-[49rem]  lg:mt-[10rem]  lg:w-[45rem] `}
           >
-            <h1 className=" lg:text-4xl  lg:mx-[4rem] mb-[2rem] mt-auto  underline underline-offset-8 decoration-brown-300 text-2xl md:text-4xl  uppercase text-center">
+            <h1 className=" lg:text-5xl  lg:mx-[4rem] mb-[2rem] mt-auto  underline underline-offset-8 decoration-brown-300 text-2xl md:text-4xl  uppercase text-center">
               Nuestro Metodo
             </h1>
 
-            <p className=" md:text-xl lg:text-xl lg:mb-[4rem] mx-[2rem] lg:mx-[4rem] md:mx-[4rem] text-lg  text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-              totam quas nesciunt adipisci voluptates, reprehenderit culpa eum
-              excepturi perferendis explicabo velit earum vel. Eius voluptates
-              beatae molestias veniam inventore accusamus! Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Nisi totam quas nesciunt
-              adipisci voluptates, reprehenderit culpa eum excepturi perferendis
-              explicabo velit earum vel. Eius voluptates beatae molestias veniam
-              inventore accusamus! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Labore repellat, eos quos aspernatur corrupti
-              qui, corporis eius earum odio in quasi magnam voluptates
-              cupiditate optio laudantium impedit blanditiis quisquam
-              consequatur.
+            <p className=" md:text-2xl lg:text-3xl lg:mb-[4rem] mx-[2rem] lg:mx-[4rem] md:mx-[4rem] text-2xl  text-justify">
+              Creemos en la importancia de conectar el cuerpo, la mente y el
+              espíritu. Nuestro método de bienestar total se centra en la
+              armonía y el equilibrio para ayudarte a alcanzar un estado de paz
+              y serenidad.
             </p>
           </div>
         </div>
@@ -255,10 +246,11 @@ function Section2() {
           <h1 className="uppercase text-3xl md:text-4xl lg:text-5xl">
             programas
           </h1>
-          <h3 className="uppercase text-base">
-            ¡ is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s,!
+          <h3 className="uppercase text-[0.8rem] md:text-lg">
+            Con nuestro pack de bienestar total, tendrás acceso a una variedad.
+            Cada clase está diseñada para nutrir tu cuerpo, mente y alma y
+            ayudarte a alcanzar una profunda relajación ¡No te pierdas esta
+            oportunidad única de transformar tu vida!
           </h3>
         </div>
         <Carousel cards={cards} offset={200} showArrows={false} />

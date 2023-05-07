@@ -12,11 +12,11 @@ function Formulario() {
       <section id="Contact">
         <div className="bg-brown-200 h-screen w-full flex flex-col justify-center items-center">
           <div className="flex flex-col text-center pt-10">
-            <h1 className="text-3xl md:text-5xl uppercase">
-              ¿Tienes alguna duda?
+            <h1 className="text-2xl md:text-4xl uppercase">
+              ¿Listo para empezar tu viaje hacia el bienestar?
             </h1>
-            <h2 className="text-lg md:text-3xl uppercase">
-              ¡Contacta con nosotros!
+            <h2 className="text-base md:text-2xl uppercase">
+              ¡Contáctanos y déjanos ayudarte en cada paso del camino!
             </h2>
           </div>
           <div className=" h-full w-full flex justify-center items-center">
