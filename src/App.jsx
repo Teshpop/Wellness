@@ -164,7 +164,7 @@ function Section3() {
             <button onClick={() => setShowModal(true)}>
               <img
                 src={imgtesting}
-                className="my-[1rem] w-[10rem] h-[10rem] md:w-[13rem] md:h-[13rem] lg:w-[15rem] lg:h-[15rem] rounded-full lg:mt-[3rem] grayscale transition-all duration-500 hover:grayscale-0"
+                className="my-[1rem] w-[10rem] h-[10rem] md:w-[13rem] md:h-[13rem] lg:w-[15rem] lg:h-[15rem] rounded-full lg:mt-[3rem] grayscale transition-all duration-500 md:hover:grayscale-0"
               ></img>
             </button>
           </div>
@@ -196,7 +196,7 @@ function Section3() {
           nam, sequi laudantium est earum? Doloribus possimus nisi itaque.
         </p>
         <div>
-          <h1 className="pb-[2rem] text-3xl md:text-4xl lg:text-5xl px-full uppercase">
+          <h1 className="pb-[2rem] text-3xl md:text-4xl lg:text-5xl mx-[2rem] uppercase">
             Nuestros Profesionales
           </h1>
 
