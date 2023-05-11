@@ -132,7 +132,7 @@ export default function Programs() {
       <div className="h-screen w-screen bg-brown-200 flex justify-center items-center flex-col">
         <div className="flex flex-col text-center justify-center items-center pt-12">
           <h1 className="uppercase text-3xl md:text-4xl lg:text-5xl">
-            programas
+            Clases incluidas en el pack
           </h1>
           <div className=" flex justify-center items-center text-center w-[85%] lg:w-[60%]">
             <h3 className="uppercase text-[0.8rem] md:text-lg">

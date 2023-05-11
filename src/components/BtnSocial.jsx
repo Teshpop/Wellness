@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import menuRs from "/img/MenuRS.png";
+import menuRs from "/img/compartir.png";
 import tiktok from "/img/tiktokLogo.png";
 import facebook from "/img/facebookLogo.png";
 import instagram from "/img/instagramLogo.png";

@@ -119,6 +119,7 @@ function App() {
         <Section0 />
         <Section1 />
         <Components.Programs />
+        <Components.Rooms />
         <Components.AboutUs />
         <Components.Formulario />
         <Components.BtnSocial />

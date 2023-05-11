@@ -5,6 +5,7 @@ import Header from "./Header.jsx";
 import Toastify from "./Toastify.jsx";
 import AboutUs from "./AboutUs.jsx";
 import Programs from "./Programs.jsx";
+import Rooms from "./Rooms.jsx";
 
 export default {
   Header,
@@ -14,4 +15,5 @@ export default {
   Toastify,
   AboutUs,
   Programs,
+  Rooms,
 };
