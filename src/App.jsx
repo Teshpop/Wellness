@@ -82,19 +82,19 @@ function Section1() {
       <section id="OurMethods" className="w-full">
         <div className="my-8 lg:flex-row flex flex-col w-full justify-evenly md:items-center lg:items-start ">
           <div
-            className={`relative left-0 ${imgPosition}  lg:ml-[2rem] transition-all duration-500 ease-out lg:w-1/2`}
+            className={`relative left-0 ${imgPosition} lg:py-[5rem] lg:ml-[2rem] transition-all duration-500 ease-out lg:w-1/2`}
           >
             <img
               src={imgmethod}
               alt="welness place"
-              className={`flex mt-[10rem] h-[20rem] mx-auto md:w-[25rem] md:h-[25rem] lg:mx-auto lg:w-[35rem]  lg:h-auto  rounded-3xl `}
+              className={`flex  h-[20rem] mx-auto md:w-[25rem] md:h-[25rem] lg:mx-auto lg:w-[38rem]  lg:h-auto  rounded-3xl `}
             />
           </div>
 
           <div
-            className={`relative  right-0 ${textPosition} transition-all duration-500 md:ease-out flex flex-col justify-center mx-[2rem] md:mx-auto font-semibold my-[3rem] lg:mr-[8rem] mt-[2rem]   md:w-[49rem]  lg:mt-[10rem]  lg:w-[45rem] `}
+            className={`relative lg:my-auto right-0 ${textPosition} transition-all duration-500 md:ease-out flex flex-col justify-center mx-[2rem] md:mx-auto font-semibold my-[3rem] lg:mr-[8rem]  lg:my-[4rem]  md:w-[49rem]   lg:w-[45rem] `}
           >
-            <h1 className=" lg:text-5xl  lg:mx-[4rem] mb-[2rem] mt-auto  underline underline-offset-8 decoration-brown-300 text-2xl md:text-4xl  uppercase text-center">
+            <h1 className=" lg:text-5xl  lg:mx-[4rem] mb-[2rem]   underline underline-offset-8 decoration-brown-300 text-2xl md:text-4xl  uppercase text-center">
               Nuestro Metodo
             </h1>
 
