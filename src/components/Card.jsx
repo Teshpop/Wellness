@@ -29,7 +29,7 @@ function Card(props) {
             alt="imagen clase"
           />
         </div>
-        <div className=" h-[80%] w-[90%] overflow-hidden overflow-y-scroll ">
+        <div className=" h-[80%] w-[70%] overflow-hidden overflow-y-scroll ">
           <p className="text-justify text-sm sm:text-base">{props.text}</p>
         </div>
       </animated.div>

@@ -14,7 +14,7 @@ function BtnSocial() {
   }
 
   return (
-    <>
+    <div className=" z-50 ">
       <a rel="notfollow" href="https://www.tiktok.com/" target="_blank">
         <img
           src={tiktok}
@@ -67,7 +67,7 @@ function BtnSocial() {
           showButtons ? "opacity-100" : "opacity-40"
         }`}
       />
-    </>
+    </div>
   );
 }
 

@@ -95,17 +95,25 @@ function Header() {
             }`}
           >
             <div className="fixed flex flex-col justify-center items-center h-screen w-full text-3xl sm:text-4xl gap-24 sm:gap-36">
-              <a rel="notfollow" href="#" className="px-10 hover:border-b-2">
+              <a
+                rel="notfollow"
+                href="#OurMethods"
+                className="px-10 hover:border-b-2"
+              >
                 Nuestro método
               </a>
               <a
                 rel="notfollow"
-                href="#programs"
+                href="#Programs"
                 className="px-10 hover:border-b-2"
               >
                 Programas
               </a>
-              <a rel="notfollow" href="#" className="px-10 hover:border-b-2">
+              <a
+                rel="notfollow"
+                href="#AboutUs"
+                className="px-10 hover:border-b-2"
+              >
                 Sobre Nosotros + Equipo
               </a>
               <a rel="notfollow" href="#" className="px-10 hover:border-b-2">
@@ -113,7 +121,7 @@ function Header() {
               </a>
               <a
                 rel="notfollow"
-                href="#"
+                href="#Contact"
                 className="px-5 hover:border-b-2 text-xl"
               >
                 Cerrar
