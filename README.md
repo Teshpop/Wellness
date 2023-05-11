@@ -1,8 +1,6 @@
-Creditos
-========
+# Creditos
 
-Iconos
-------
+## Iconos
 
 [Whatsapp iconos creados por Pixel perfect - Flaticon](https://www.flaticon.es/iconos-gratis/whatsapp "whatsapp iconos")
 
