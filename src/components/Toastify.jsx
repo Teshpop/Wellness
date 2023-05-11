@@ -7,7 +7,13 @@ function Toastify({ id }) {
   useEffect(() => {
     toast.info(
       <div className="text-center">
-        <h1>¡Obten el 20% de descuento al mandanos tu correo electronico!</h1>
+        <h1>
+          ¡Reserva ahora y asegura un descuento del 20% y un masaje totalmente
+          gratuito!
+          <br /> No dejes pasar esta oportunidad de mimarte y disfrutar de una
+          experiencia de bienestar única. Dejanos tu contacto a continuación y
+          déjanos cuidar de ti durante tu retiro de 7 días.
+        </h1>
         <a className="underline" href={id}>
           ¡Haz click aqui!
         </a>
