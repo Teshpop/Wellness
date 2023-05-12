@@ -74,7 +74,7 @@ function Rooms() {
     <>
       <Carousel className="h-screen w-screen">
         <div>
-          <img className="w-full" src={imgH9} alt="" />
+          <img className=" opacity-90 w-full" src={imgH9} alt="" />
         </div>
         <div
           className=" h-full w-full bg-cover bg-center bg-no-repeat"
