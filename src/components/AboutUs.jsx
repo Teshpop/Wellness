@@ -78,17 +78,14 @@ function AboutUs() {
         <h1 className="lg:text-5xl md:text-4xl  text-3xl mb-[2rem]   mx-[3rem] uppercase mt-[3rem] ">
           sobre nosotros
         </h1>
-        <p className="text-lg md:text-lg lg:text-2xl mb-[4rem] mx-[3rem] lg:mx-[6rem]   text-justify ">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          animi voluptates, quasi cum expedita obcaecati inventore ad enim iure
-          quas. Iste nam doloribus maiores fugit repellat quis dicta
-          perspiciatis corrupti? Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. At aut, soluta pariatur ipsa mollitia eaque a autem
-          nostrum explicabo quos laudantium vero possimus cupiditate neque
-          repellendus molestias incidunt itaque repellat. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Illum aliquid iste porro id
-          provident necessitatibus alias adipisci voluptate incidunt et eveniet
-          nam, sequi laudantium est earum? Doloribus possimus nisi itaque.
+        <p className="text-lg md:text-lg lg:text-2xl mb-[4rem] mx-[3rem] lg:mx-[10rem]   text-center ">
+          Nuestro equipo de profesionales apasionados combinan actividades
+          revitalizantes, momentos de tranquilidad y reflexión, en un entorno
+          sereno y rodeado de hermosos paisajes naturales. Únete a nuestra
+          comunidad de apoyo y conexión, donde te brindamos atención
+          personalizada para asegurarnos de que tu experiencia sea inolvidable.
+          ¡Te esperamos para un viaje hacia la renovación y el bienestar
+          integral!
         </p>
         <div>
           <h1 className="pb-[2rem] text-3xl md:text-4xl lg:text-5xl mx-[2rem] uppercase">
