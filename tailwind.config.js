@@ -15,6 +15,7 @@ export default {
       blue: "#d5cfd9",
       green: "#cddecc",
       black: "#333",
+      white2: "#fff",
     },
     fontFamily: {
       bellota: ["Bellota Text", "cursive"],

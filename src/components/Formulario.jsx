@@ -93,7 +93,7 @@ function Formulario() {
               </Formik>
               <div className="flex flex-col justify-center items-center gap-4">
                 <pre>O envianos un mensaje</pre>
-                <a href="https://wa.me/524442896434?text=%c2%a1Hola!%2c+me+encantar%c3%ada+apartar+un+lugar">
+                <a href="https://wa.me/34625719131?text=%c2%a1Hola!%2c+me+encantar%c3%ada+apartar+un+lugar">
                   <img
                     className=" h-16 w-16 md:h-20 md:w-20 lg:hover:drop-shadow-lg transition-all duration-300 md:hover:animate-pulse "
                     src={whatsapp}
