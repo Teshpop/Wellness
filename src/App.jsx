@@ -1,6 +1,13 @@
-import Components from "./components";
-// import Card from "./components/Card";
-// import Carousel from "./components/Caroulsel";
+import {
+  AboutUs,
+  BtnSocial,
+  Rooms,
+  Toastify,
+  Footer,
+  Header,
+  Programs,
+  Formulario,
+} from "./components";
 
 import portada from "/img/Portada.png";
 import imgmethod from "/img/imgWelness.png";
@@ -115,16 +122,16 @@ function App() {
   return (
     <>
       <div className=" font-bellota mr-0 text-brown-300 font-semibold">
-        <Components.Header />
+        <Header />
         <Section0 />
         <Section1 />
-        <Components.Programs />
-        <Components.Rooms />
-        <Components.AboutUs />
-        <Components.Formulario />
-        <Components.BtnSocial />
-        <Components.Footer />
-        <Components.Toastify id={"#Contact"} />
+        <Programs />
+        <Rooms />
+        <AboutUs />
+        <Formulario />
+        <BtnSocial />
+        <Footer />
+        <Toastify id={"#Contact"} />
       </div>
     </>
   );

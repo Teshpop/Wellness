@@ -7,7 +7,7 @@ import AboutUs from "./AboutUs.jsx";
 import Programs from "./Programs.jsx";
 import Rooms from "./Rooms.jsx";
 
-export default {
+export{
   Header,
   Formulario,
   Footer,

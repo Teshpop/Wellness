@@ -1,5 +1,4 @@
-import Card from "./Card";
-import Carousel from "./Caroulsel";
+import { Card, Carousel } from "../components";
 
 import imgtesting from "/img/imgPruebas.png";
 import { v4 as uuidv4 } from "uuid";
