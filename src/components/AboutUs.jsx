@@ -24,8 +24,8 @@ function AboutUs() {
           {/* contenedor principal */}
           <div className="bg-brown-200 h-[95%] w-[95%] flex flex-col items-center md:h-[80%] md:w-[50%] rounded-xl shadow-md">
             {/* contenedor encabezado */}
-            <div className="flex flex-row py-5 gap-5 md:gap-[4rem] w-full justify-center items-center">
-              <div className="h-[6rem] w-[6rem] md:h-[8.5rem] md:w-[8.5rem] rounded-full flex justify-center items-center">
+            <div className="flex flex-row py-4 gap-5 md:gap-[3rem] lg:gap-[5rem] w-full justify-center items-center">
+              <div className="h-[6rem] w-[6rem] md:h-[8.5rem] md:w-[8.5rem] ml-auto  rounded-full flex justify-center items-center">
                 <img
                   src={imgbio}
                   alt={name}
@@ -35,16 +35,16 @@ function AboutUs() {
               <h2 className=" font-bold text-2xl md:text-5xl">{name}</h2>
               <button
                 onClick={onClose}
-                className="text-2xl absolute mb-[5rem] ml-[19rem] md:mb-[7rem] md:ml-[55rem] md:text-4xl"
+                className="text-2xl  mb-[5rem]  md:mb-[7rem] ml-auto mr-[1rem] lg:ml-auto md:text-2xl lg:text-xl"
               >
                 X
               </button>
             </div>
             {/* Divisor */}
-            <div className="w-[90%] md:w-[50%] bg-black h-[0.05rem] md:h-[0.1rem] overflow-hidden" />
+            <div className="w-[90%] md:w-[50%] bg-black h-[0.05rem] md:h-[0.1rem]   " />
             {/* contenedor textos */}
-            <div className="flex flex-col items-center w-full h-[95%] gap-5">
-              <div className="mt-5 text-justify px-4 py-3 rounded-md w-[90%] h-[60%] overflow-hidden overflow-y-scroll shadow-inner md:shadow-none">
+            <div className="flex flex-col items-center w-full h-[95%] md:gap-[1rem] gap-5">
+              <div className="mt-5 text-justify px-4 py-3 rounded-md w-[90%] h-[60%] md:h-[50%] overflow-hidden overflow-y-scroll shadow-inner md:shadow-none">
                 <p className="text-base md:text-xl">{description}</p>
               </div>
               <div className="flex justify-center items-center h-[20%] md:w-full">
