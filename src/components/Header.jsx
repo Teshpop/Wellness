@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Logo from "/img/WellnessLogo.png";
+import { Logo } from "../assets";
 
 function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState(null);

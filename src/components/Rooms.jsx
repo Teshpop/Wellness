@@ -1,10 +1,4 @@
-import imgH2 from "/img/imgH2.jpg";
-import imgH3 from "/img/imgH3.jpg";
-import imgH4 from "/img/imgH4.jpg";
-import imgH5 from "/img/imgH5.jpg";
-import imgH7 from "/img/imgH7.jpg";
-import imgH8 from "/img/imgH8.jpg";
-import imgH9 from "/img/imgH9.jpg";
+import { imgH2, imgH3, imgH4, imgH5, imgH7, imgH8, imgH9 } from "../assets";
 import Carousel from "nuka-carousel";
 
 function Rooms() {

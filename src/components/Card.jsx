@@ -20,16 +20,19 @@ function Card(props) {
         onMouseLeave={() => setShow(false)}
       >
         <div className="flex flex-row justify-center items-center w-[80%] lg:gap-5">
-          <h2 className=" text-lg sm:text-2xl uppercase text-center">
+          <h2 className="text-lg sm:text-xl uppercase text-center">
             {props.title}
           </h2>
-          <img
-            className=" rounded-full h-16 sm:h-20"
-            src={props.imagen}
-            alt="imagen clase"
-          />
+          <div className="h-[5rem] w-[5rem] rounded-full flex justify-center items-center bg-brown-300">
+            <img
+              className="rounded-full h-full object-cover"
+              style={{ objectFit: "cover" }}
+              src={props.imagen}
+              alt="imagen clase"
+            />
+          </div>
         </div>
-        <div className=" h-[80%] w-[70%] overflow-hidden overflow-y-scroll ">
+        <div className="h-[80%] w-[70%] overflow-hidden overflow-y-scroll">
           <p className="text-justify text-sm sm:text-base">{props.text}</p>
         </div>
       </animated.div>

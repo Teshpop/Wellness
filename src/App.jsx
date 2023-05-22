@@ -9,8 +9,7 @@ import {
   Formulario,
 } from "./components";
 
-import portada from "/img/Portada.png";
-import imgmethod from "/img/imgWelness.png";
+import { Portada, imgWelness } from "./assets";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -22,7 +21,7 @@ function Section0() {
       <div className=" z-2 bg-brown-300 absolute w-full h-screen bg-fixed bg-opacity-40 "></div>
       <div
         className=" z-1 bg-center h-screen w-full bg-fixed bg-cover bg-no-repeat flex justify-center"
-        style={{ backgroundImage: `url(${portada})` }}
+        style={{ backgroundImage: `url(${Portada})` }}
       >
         <div className=" flex flex-col justify-between items-center h-[20%] md:h-[25%] lg:h-[32%] mt-60 md:mt-60 lg:mt-48 relative">
           <h1 className=" text-4xl md:text-5xl lg:text-6xl uppercase ">
@@ -92,7 +91,7 @@ function Section1() {
             className={`relative left-0 ${imgPosition} lg:py-[5rem] lg:ml-[2rem] transition-all duration-500 ease-out lg:w-1/2`}
           >
             <img
-              src={imgmethod}
+              src={imgWelness}
               alt="welness place"
               className={`flex  h-[20rem] mx-auto md:w-[25rem] md:h-[25rem] lg:mx-auto lg:w-[38rem]  lg:h-auto  rounded-3xl `}
             />

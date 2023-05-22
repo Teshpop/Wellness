@@ -1,5 +1,4 @@
-import whatsapp from "/img/whatsappLogo.png";
-import icono from "/img/WellnessLogo.png";
+import { whatsappLogo, Logo } from "../assets";
 
 import { Form, Formik } from "formik";
 import { createDataRequest } from "../api/datas.api.js";
@@ -96,14 +95,14 @@ function Formulario() {
                 <a href="https://wa.me/34625719131?text=%c2%a1Hola!%2c+me+encantar%c3%ada+apartar+un+lugar">
                   <img
                     className=" h-16 w-16 md:h-20 md:w-20 lg:hover:drop-shadow-lg transition-all duration-300 md:hover:animate-pulse "
-                    src={whatsapp}
+                    src={whatsappLogo}
                     alt="icono whatsapp"
                   />
                 </a>
               </div>
               <img
                 className=" drop-shadow-xl md:h-[20rem] h-32 pt-4"
-                src={icono}
+                src={Logo}
                 alt="Logo"
               />
             </div>

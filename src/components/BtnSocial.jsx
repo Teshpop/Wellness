@@ -1,10 +1,11 @@
 import { useState } from "react";
-
-import menuRs from "/img/compartir.png";
-import tiktok from "/img/tiktokLogo.png";
-import facebook from "/img/facebookLogo.png";
-import instagram from "/img/instagramLogo.png";
-import twitter from "/img/twitterLogo.png";
+import {
+  MenuRS,
+  tiktokLogo,
+  facebookLogo,
+  instagramLogo,
+  twitterLogo,
+} from "../assets";
 
 function BtnSocial() {
   const [showButtons, setShowButtons] = useState(false);
@@ -17,7 +18,7 @@ function BtnSocial() {
     <div className=" z-50 ">
       <a rel="notfollow" href="https://www.tiktok.com/" target="_blank">
         <img
-          src={tiktok}
+          src={tiktokLogo}
           alt="Logo Tik-Tok"
           className={`md:h-20 md:w-20 w-[4rem] h-[4rem] opacity-40 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
             showButtons
@@ -28,7 +29,7 @@ function BtnSocial() {
       </a>
       <a rel="notfollow" href="https://www.facebook.com/" target="_blank">
         <img
-          src={facebook}
+          src={facebookLogo}
           alt="Logo Facebook"
           className={`md:h-20 md:w-20 w-[4rem] h-[4rem] opacity-40 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
             showButtons
@@ -39,7 +40,7 @@ function BtnSocial() {
       </a>
       <a rel="notfollow" href="https://www.twitter.com/" target="_blank">
         <img
-          src={twitter}
+          src={twitterLogo}
           alt="Logo Twitter"
           className={`md:h-20 md:w-20 w-[4rem] h-[4rem] opacity-40 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
             showButtons
@@ -50,7 +51,7 @@ function BtnSocial() {
       </a>
       <a rel="notfollow" href="https://www.instagram.com/" target="_blank">
         <img
-          src={instagram}
+          src={instagramLogo}
           alt="Logo Instagram"
           className={`md:h-20 md:w-20 w-[4rem] h-[4rem] opacity-40 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
             showButtons
@@ -60,7 +61,7 @@ function BtnSocial() {
         />
       </a>
       <img
-        src={menuRs}
+        src={MenuRS}
         onClick={handleClick}
         alt="Menu Redes Sociales"
         className={`md:w-24 md:h-24 w-[5rem] h-[5rem] fixed bottom-5 right-5 hover:opacity-100 cursor-pointer transition-all duration-300 sm: ${
