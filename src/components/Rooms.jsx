@@ -1,5 +1,5 @@
-import { imgH2, imgH3, imgH4, imgH5, imgH7, imgH8, imgH9 } from "../assets";
-import Carousel from "nuka-carousel";
+import { imgH2, imgH3, imgH4, imgH5, imgH7, imgH8, imgH9 } from "../assets"
+import Carousel from "nuka-carousel"
 
 function Rooms() {
   const Cont = (props) => {
@@ -63,8 +63,8 @@ function Rooms() {
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <>
@@ -73,18 +73,18 @@ function Rooms() {
           className="h-full w-full bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${imgH9})` }}
         ></div>
-        <div
+        {/* <div
           className=" h-full w-full bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${imgH8})` }}
         >
           <Cont price={"1650"} days={"7 dias 6 noches"} />
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className=" h-full w-full bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${imgH2})` }}
         >
           <Cont />
-        </div>
+        </div> */}
         <div
           className=" h-full w-full bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${imgH3})` }}
@@ -111,7 +111,7 @@ function Rooms() {
         </div>
       </Carousel>
     </>
-  );
+  )
 }
 
-export default Rooms;
+export default Rooms

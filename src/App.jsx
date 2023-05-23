@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   AboutUs,
   BtnSocial,
@@ -7,13 +8,13 @@ import {
   Header,
   Programs,
   Formulario,
-} from "./components";
+} from "./components"
 
-import { Portada, imgWelness } from "./assets";
+import { Portada, imgWelness } from "./assets"
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react"
 
-import "./index.css";
+import "./index.css"
 
 function Section0() {
   return (
@@ -35,49 +36,49 @@ function Section0() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 function Section1() {
-  const [scrollDirection, setScrollDirection] = useState(null);
+  const [scrollDirection, setScrollDirection] = useState(null)
 
-  const divRef = useRef();
+  const divRef = useRef()
   useEffect(() => {
-    const div = divRef.current;
-    const divTop = div.offsetTop;
-    const divHeight = div.offsetHeight;
-    const windowHeight = window.innerHeight;
+    const div = divRef.current
+    const divTop = div.offsetTop
+    const divHeight = div.offsetHeight
+    const windowHeight = window.innerHeight
 
     const updateScrollDirection = () => {
-      const scrollY = window.pageYOffset;
-      const direction = scrollY > lastScrollY ? "down" : "up";
+      const scrollY = window.pageYOffset
+      const direction = scrollY > lastScrollY ? "down" : "up"
       if (
         scrollY >= divTop - windowHeight / 2 &&
         scrollY <= divTop + divHeight - windowHeight / 2
       ) {
-        setScrollDirection(direction);
+        setScrollDirection(direction)
       } else if (scrollY === 0) {
-        setScrollDirection(null);
+        setScrollDirection(null)
       }
-      lastScrollY = scrollY <= 0 ? scrollY : 0;
-    };
+      lastScrollY = scrollY <= 0 ? scrollY : 0
+    }
 
-    let lastScrollY = window.pageYOffset;
-    window.addEventListener("scroll", updateScrollDirection);
+    let lastScrollY = window.pageYOffset
+    window.addEventListener("scroll", updateScrollDirection)
 
     return () => {
-      window.removeEventListener("scroll", updateScrollDirection);
-    };
-  }, [scrollDirection]);
+      window.removeEventListener("scroll", updateScrollDirection)
+    }
+  }, [scrollDirection])
 
   const imgPosition =
     scrollDirection === "down"
       ? "-translate-x-0 opacity-100"
-      : "-translate-x-full opacity-0";
+      : "-translate-x-full opacity-0"
   const textPosition =
     scrollDirection === "down"
       ? "translate-x-0 opacity-100"
-      : "md:translate-x-full opacity-0 sm:-translate-x-full opacity-0";
+      : "md:translate-x-full opacity-0 sm:-translate-x-full opacity-0"
 
   return (
     <div
@@ -114,7 +115,7 @@ function Section1() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
 function App() {
@@ -133,7 +134,7 @@ function App() {
         <Toastify id={"#Contact"} />
       </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
