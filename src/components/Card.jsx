@@ -1,6 +1,29 @@
 import { useState } from "react"
 import { useSpring, animated } from "react-spring"
 
+function Card1(props) {
+  return (
+    <>
+      <div className="absolute -top-10 md:relative md:top-0  h-[4.5rem] w-[5rem] md:h-[7.5rem] md:w-[7rem] rounded-full flex justify-center items-center">
+        <img
+          className="rounded-full h-full w-[90%] object-cover"
+          style={{ objectFit: "cover" }}
+          src={props.imagen}
+          alt="imagen clase"
+        />
+      </div>
+      <div className="flex flex-col justify-center items-center w-[95%] md:w-[80%] xl:gap-5">
+        <h2 className="text-sm sm:text-base xl:text-xl uppercase text-center">
+          {props.title}
+        </h2>
+      </div>
+      <div className="h-[80%] w-[76%] overflow-hidden overflow-y-scroll">
+        <p className="text-justify text-sm sm:text-base">{props.text}</p>
+      </div>
+    </>
+  )
+}
+
 function Card(props) {
   const [show, setShow] = useState(false)
 
@@ -14,25 +37,12 @@ function Card(props) {
   return (
     <>
       <animated.div
-        className={` flex flex-col items-center ${props.color} w-[450px] h-[350px] rounded-xl py-8 gap-5`}
+        className={` flex flex-col items-center ${props.color} w-[18rem] h-[80%] md:w-[17.5rem] lg:w-[30rem] xl:w-[29rem] md:h-[70%] rounded-xl pb-2 pt-8 gap-2 md:py-8 md:gap-5`}
         style={props3}
         onMouseEnter={() => setShow(true)}
         onMouseLeave={() => setShow(false)}
       >
-        <div className="flex flex-col justify-center items-center w-[80%] lg:gap-5">
-          <div className="w-20 h-20 rounded-full flex justify-center items-center relative ">
-            <img
-              className="rounded-full w-full h-full object-fill"
-              style={{ objectFit: "cover" }}
-              src={props.imagen}
-              alt="imagen clase"
-            />
-          </div>
-          <h2 className="text-lg sm:text-xl uppercase text-center">
-            {props.title}
-          </h2>
-          <p className="text-center text-sm sm:text-base">{props.text}</p>
-        </div>
+        <Card1 title={props.title} text={props.text} imagen={props.imagen} />
       </animated.div>
     </>
   )

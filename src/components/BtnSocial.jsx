@@ -1,6 +1,6 @@
 import { useState } from "react"
 import {
-  MenuRS,
+  compartir,
   tiktokLogo,
   facebookLogo,
   instagramLogo,
@@ -61,7 +61,7 @@ function BtnSocial() {
         />
       </a>
       <img
-        src={MenuRS}
+        src={compartir}
         onClick={handleClick}
         alt="Menu Redes Sociales"
         className={`md:w-24 md:h-24 w-[5rem] h-[5rem] fixed bottom-5 right-5 hover:opacity-100 cursor-pointer transition-all duration-300 sm: ${

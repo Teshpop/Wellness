@@ -1,10 +1,9 @@
 import { Descripciones } from "../const";
 import { useState } from "react";
-import { imgPruebas } from "../assets";
 
 function AboutUs() {
   function BioFirst({ name, imgbio, description, points }) {
-    const [showMyModal, setShowModal] = useState(true);
+    const [showMyModal, setShowModal] = useState(false);
 
     const handleOnClose = () => setShowModal(false);
 
