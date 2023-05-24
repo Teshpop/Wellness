@@ -49,7 +49,11 @@ function BtnSocial() {
           }`}
         />
       </a>
-      <a rel="notfollow" href="https://www.instagram.com/" target="_blank">
+      <a
+        rel="notfollow noreferrer"
+        href="https://www.instagram.com/"
+        target="_blank"
+      >
         <img
           src={instagramLogo}
           alt="Logo Instagram"

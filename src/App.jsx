@@ -70,7 +70,7 @@ function Section1() {
             <img
               src={imgWelness}
               alt="welness place"
-              className={`flex mx-autoo rounded-3xl w-3/4 `}
+              className={`flex mx-autoo rounded w-3/4 `}
             />
           </div>
         </div>

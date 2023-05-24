@@ -1,21 +1,21 @@
-import Carousel from "react-spring-3d-carousel";
-import { useState, useEffect } from "react";
-import { config } from "react-spring";
+import Carousel from "react-spring-3d-carousel"
+import { useState, useEffect } from "react"
+import { config } from "react-spring"
 
 function Caroulsel(props) {
   const table = props.cards.map((element, index) => {
-    return { ...element, onClick: () => setGoToSlide(index) };
-  });
+    return { ...element, onClick: () => setGoToSlide(index) }
+  })
 
-  const [offsetRadius, setOffsetRadius] = useState(4);
-  const [showArrows, setShowArrows] = useState(false);
-  const [goToSlide, setGoToSlide] = useState(null);
-  const [cards] = useState(table);
+  const [offsetRadius, setOffsetRadius] = useState(4)
+  const [showArrows, setShowArrows] = useState(false)
+  const [goToSlide, setGoToSlide] = useState(null)
+  const [cards] = useState(table)
 
   useEffect(() => {
-    setOffsetRadius(props.offset);
-    setShowArrows(props.showArrows);
-  }, [props.offset, props.showArrows]);
+    setOffsetRadius(props.offset)
+    setShowArrows(props.showArrows)
+  }, [props.offset, props.showArrows])
 
   return (
     <>
@@ -29,7 +29,7 @@ function Caroulsel(props) {
         />
       </div>
     </>
-  );
+  )
 }
 
-export default Caroulsel;
+export default Caroulsel

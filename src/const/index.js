@@ -62,56 +62,56 @@ export const clases = [
     title: "Mindfulness y la conciencia plena",
     icon: Cacao,
     description:
-      "El mindfulness y la conciencia plena nos conectan con el presente y nos guían hacia una vida feliz y plena. Cultiva la atención consciente para superarte, expandir tu conciencia y encontrar paz interior. Sumérgete en esta práctica de superación personal y descubre la felicidad en cada momento.",
-    color: "bg-white",
+      "El mindfulness y la conciencia plena nos conectan con el presente y nos guían hacia una vida feliz y plena.",
+    color: "#f0ece9",
   },
   {
     title: "Ceremonia de cacao",
     icon: Florecimiento,
     description:
-      "Sumérgete en el misticismo ancestral de la Ceremonia del Cacao. Un ritual sagrado para abrir tu corazón y conectar con la energía del cacao puro. Libera emociones, encuentra paz y alegría mientras disfrutas de sus propiedades antioxidantes. ¡Experimenta la transformación y descubre tu esencia!",
-    color: "bg-blue",
+      "Sumérgete en el misticismo ancestral de la Ceremonia del Cacao. Un ritual sagrado para abrir tu corazón y conectar con la energía del cacao puro. Libera emociones, encuentra paz y alegría mientras disfrutas de sus propiedades antioxidantes. ",
+    color: "#f1dcdb",
   },
   {
     title: "Yoga Nidra ",
     icon: Clase2,
     description:
-      "Yoga Nidra: relajación profunda y sueño consciente. Conciencia plena y guía verbal en estado entre vigilia y sueño. Libera estrés y restaura equilibrio. Descansa en lo profundo y místico. Clase inaugural enfocada en relajación para días siguientes.",
-    color: "bg-yellow",
+      "Yoga Nidra: relajación profunda y sueño consciente. Conciencia plena y guía verbal en estado entre vigilia y sueño.",
+    color: "#ede9d0",
   },
   {
     title: "Yoga social",
     icon: Clase4,
     description:
-      "Yoga Social: Un viaje místico y amistoso hacia la conexión y el crecimiento. Transforma tu rostro y abre tu corazón con el yoga. Conecta contigo, la naturaleza y la tribu. Práctica de yoga, compartir en círculo y vivencias mágicas. Descubre la esencia y disfruta del camino hacia la plenitud.",
-    color: "bg-green",
+      "Yoga Social: Un viaje místico y amistoso hacia la conexión y el crecimiento. Transforma tu rostro y abre tu corazón con el yoga. Conecta contigo, la naturaleza y la tribu",
+    color: "#d5cfd9",
   },
   {
     title: "Ritual de la Creatividad",
     icon: Clase5,
     description:
-      "Descubre tu poder creador a través del ritual de creatividad. Visualiza y manifiesta tu avatar conectado con la energía de manifestación. Eres creador y creado, aliento en el vacío, canción del viento. Sostienes la vida, alimento e inspiración. Eres Shiva y Parvati, alquimista de tu vida. Planta la semilla de tus sueños. En ti está el creador y la creación, ohm.",
-    color: "bg-pink",
+      "Descubre tu poder creador a través del ritual de creatividad. Visualiza y manifiesta tu avatar conectado con la energía de manifestación. Eres creador y creado, aliento en el vacío, canción del viento.",
+    color: "#cddecc",
   },
   {
     title: "Conexión Reiki / El arte de dar y recibir para manifestar Luz",
     icon: Clase7,
     description:
-      "Ritual sagrado de conexión con la energía universal y manifestación de la luz en la materia. Practicamos la auto-realización y compartimos energía multiplicando el poder del Reiki. Meditación, respeto, iniciación REIJU y prácticas grupales de dar y recibir Reiki. Unión y elevación de la consciencia en este ritual de conexión universal.",
-    color: "bg-green",
+      "Ritual sagrado de conexión con la energía universal y manifestación de la luz en la materia. Practicamos la auto-realización y compartimos energía multiplicando el poder del Reiki.",
+    color: "#333",
   },
   {
     title: "Extatic dance / La Danza de la Unidad",
     icon: clase6,
     description:
-      "La danza en comunidad: un portal a otras dimensiones donde lo divino y terrenal se fusionan. Ceremonia de alquimia sagrada, cada cuerpo un templo, cada movimiento una oración. Sonidos sagrados nos conectan, sanamos, empatizamos, celebramos. Abre tu corazón a la unión, baila en silencio, expresa tu esencia en la alegría eterna de la unidad.",
-    color: "bg-yellow",
+      "La danza en comunidad: un portal a otras dimensiones donde lo divino y terrenal se fusionan. Ceremonia de alquimia sagrada, cada cuerpo un templo, cada movimiento una oración.",
+    color: "#ede9d0",
   },
   {
     title: "Ritual de florecimiento en el Mar ",
     icon: clase1,
     description:
-      ' "Baño de florecimiento": ritual en el mar de limpieza y purificación para cuerpo y mente. Flores exóticas y plantas medicinales riegan tu aura. Te sentirás como una divinidad. Luz perfumada transmuta energías negativas, atrae armonía. Ritual sagrado de florecimiento inca como bendición, activa tu destino y recarga energía cósmica. Conecta con grandes espíritus, atrae vibraciones positivas. Ritual de cierre y bendición.',
-    color: "bg-blue",
+      ' "Baño de florecimiento": ritual en el mar de limpieza y purificación para cuerpo y mente. Flores exóticas y plantas medicinales riegan tu aura. Te sentirás como una divinidad.',
+    color: "#ede9d0",
   },
 ]

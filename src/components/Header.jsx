@@ -59,9 +59,10 @@ function Header() {
   return (
     <>
       <header
-        className={`z-10 h-[80px] w-screen fixed ${
-          scrollDirection === "down" ? "-top-24 " : "top-0 "
-        } transition-all duration-500`}
+        // className={`z-10 h-[80px] w-screen fixed ${
+        //   scrollDirection === "down" ? "-top-24 " : "top-0 "
+        // } transition-all duration-500`}
+        className={`z-10 h-[80px] w-screen absolute left-0 top-0`}
       >
         <div className="flex flex-row justify-between items-center container mx-auto">
           <a
