@@ -11,7 +11,7 @@ import {
   Clase7,
   Cacao,
   Florecimiento,
-} from "../assets";
+} from "../assets"
 
 export const Descripciones = [
   {
@@ -55,63 +55,63 @@ export const Descripciones = [
       "Apasionada del Yoga.",
     ],
   },
-];
+]
 
 export const clases = [
   {
     title: "Ceremonia de cacao",
     icon: Cacao,
     description:
-      "La ceremonia del cacao es un ritual originario de los mayas que se ha extendido a otras culturas indígenas de América Central y del Sur. Se prepara y se consume una bebida hecha con cacao puro y especias en una ceremonia de agradecimiento y apertura del corazón. Se crea un altar sagrado con ofrendas a la tierra y a las energías presentes en ese día. Durante la ceremonia se cantan mantras y se toca música con tambor chamánico para elevar la vibración. El cacao es una planta sagrada que te ayuda a liberar emociones y a sentir paz y alegría. Además, tiene muchas propiedades buenas para la salud, como la mayor fuente de antioxidantes y la presencia de Teobromina, un alcaloide saludable que tiene efectos mucho más suaves y duraderos que la cafeína.",
+      "La ceremonia del cacao es un ritual originario de los mayas que se ha extendido a otras culturas indígenas de América Central y del Sur. ",
     color: "bg-white",
   },
   {
     title: "Ritual de florecimiento en el Mar",
     icon: Florecimiento,
     description:
-      "Un baño de florecimiento es un ritual en el río, mar o en la montaña para ayudar a limpiar y purificar tu cuerpo y mente. Seleccionamos con mimo flores exóticas, pétalos y plantas silvestres medicinales con las que regaremos tu aura. Te sentirás como una divinidad. Sentirás como un torrente de luz perfumada diluye y transmuta energías negativas, estrés y tensión acumulados en tu cuerpo y mente, y atrae energías positivas de armonía y equilibrio. El ritual sagrado de florecimiento inca es una bendición que activa tu destino y te recarga de energía cósmica espiritual. Conecta con los grandes espíritus y atrae vibraciones positivas. ",
+      "Un baño de florecimiento es un ritual en el río, mar o en la montaña para ayudar a limpiar y purificar tu cuerpo y mente. ",
     color: "bg-blue",
   },
   {
     title: "Be energy/ Sé energía / Chi kung . Tai Chi ",
     icon: Clase2,
     description:
-      "La práctica que te propongo es una experiencia mística que busca la armonización de tu cuerpo, mente y espíritu a través de antiguas técnicas orientales como el Chi Kung y el Tai Chi. A través de la conexión con la energía Chi o prana, se busca sanar aspectos vitales determinados a nivel espiritual, energético, mental, emocional y físico. En esta práctica, aprenderás a encontrar tu centro, a estar presente, a ser fluido y expresivo en tus movimientos, a concentrar y dirigir tu energía y a contrarrestar y redirigir las energías adversas fuera de tu campo energético de acción. Al final de la sesión, experimentarás una sensación de paz y armonía, y habrás establecido un vínculo más fuerte con tu propia esencia divina.",
+      "La práctica que te propongo es una experiencia mística que busca la armonización de tu cuerpo, mente y espíritu a través de antiguas técnicas orientales como el Chi Kung y el Tai Chi.",
     color: "bg-yellow",
   },
   {
     title: "Conexión Reiki / El arte de dar y recibir para manifestar Luz",
     icon: Clase4,
     description:
-      "Este es un ritual sagrado de conexión con la energía universal y la manifestación de la luz en la materia. En él, nos reunimos para practicar la auto-realización y compartir energía con otros seres, multiplicando el poder del Reiki por el número de participantes. El ritual comienza con una meditación en silencio y un compromiso de respeto hacia todo y todos. Luego, cada participante recibe una iniciación REIJU para transmitir la capacidad de curación a los demás. A través de prácticas grupales, todos dan y reciben Reiki del resto, moviendo la energía con música en círculos que avanzan y retroceden. Al final, cerramos la sesión en un gran círculo y compartimos nuestras experiencias. Este ritual es una experiencia de unión con la energía universal y de elevación de la consciencia.",
+      "Este es un ritual sagrado de conexión con la energía universal y la manifestación de la luz en la materia.",
     color: "bg-green",
   },
   {
     title: "Extatic dance / La Danza de la Unidad",
     icon: Clase5,
     description:
-      "La danza en comunidad es un portal a otras dimensiones, donde se fusionan lo divino y lo terrenal, lo ancestral y lo moderno, lo personal y lo colectivo. Es una ceremonia de alquimia sagrada donde cada cuerpo es un templo y cada movimiento es una oración. A través de los sonidos sagrados del mundo, nos conectamos con nuestro ser más profundo y con los demás, en un ritual de danza extática que nos permite sanar, empatizar, celebrar y abrir nuestro corazón a la unión. Bailamos en silencio, dándole la voz a nuestra energía y explorando las posibilidades creativas de nuestro cuerpo, descubriendo así nuestra verdadera esencia y expresándose en la alegría eterna e ilimitada de la unidad.",
+      "La danza en comunidad es un portal a otras dimensiones, donde se fusionan lo divino y lo terrenal, lo ancestral y lo moderno, lo personal y lo colectivo.",
     color: "bg-pink",
   },
   {
     title: "Yoga Nidra",
     icon: Clase7,
     description:
-      'Yoga Nidra es una antigua práctica de relajación profunda conocida como "sueño consciente". A través de la conciencia plena y la guía verbal, te sumerges en un estado entre la vigilia y el sueño, liberando el estrés y restaurando el equilibrio. Experimentas un descanso profundo y místico que rejuvenece cuerpo y mente. ',
+      'Yoga Nidra es una antigua práctica de relajación profunda conocida como "sueño consciente". A través de la conciencia plena y la guía verbal, te sumerges en un estado entre la vigilia y el sueño, liberando el estrés y restaurando el equilibrio. ',
     color: "bg-green",
   },
   {
     title: "Yoga social ",
     icon: clase6,
     description:
-      "Yoga social es compartir yoga en tribu. Yoga del bueno, del que te cambia la cara y te abre el corazón. Yoga para conectar con uno mismo, con la naturaleza y también con el grupo. Porque al final atraemos a personas que son como nosotros y es momento de unirnos, de conocernos, de acompañarnos, de aprender unos de otros e inspirarnos mutuamente. Es momento de volver al origen, a la esencia, a la tribu. En esta sesión practicaremos 1h de yoga y después compartiremos en círculo con el grupo. Nos conoceremos, compartiremos vivencias, música y lo que surja, porque un El círculo lo creamos todos y cada día es diferente.",
+      "Yoga social es compartir yoga en tribu. Yoga del bueno, del que te cambia la cara y te abre el corazón. Yoga para conectar con uno mismo, con la naturaleza y también con el grupo.",
     color: "bg-yellow",
   },
   {
     title: "Mindfulness y la conciencia plena",
     icon: clase1,
     description:
-      "La danza en comunidad es un portal a otras dimensiones, donde se fusionan lo divino y lo terrenal, lo ancestral y lo moderno, lo personal y lo colectivo. Es una ceremonia de alquimia sagrada donde cada cuerpo es un templo y cada movimiento es una oración. A través de los sonidos sagrados del mundo, nos conectamos con nuestro ser más profundo y con los demás, en un ritual de danza extática que nos permite sanar, empatizar, celebrar y abrir nuestro corazón a la unión. Bailamos en silencio, dándole la voz a nuestra energía y explorando las posibilidades creativas de nuestro cuerpo, descubriendo así nuestra verdadera esencia y expresándose en la alegría eterna e ilimitada de la unidad.",
+      "La danza en comunidad es un portal a otras dimensiones, donde se fusionan lo divino y lo terrenal, lo ancestral y lo moderno, lo personal y lo colectivo.",
     color: "bg-blue",
   },
-];
+]

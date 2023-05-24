@@ -1,21 +1,21 @@
-import { useState } from "react";
+import { useState } from "react"
 import {
   MenuRS,
   tiktokLogo,
   facebookLogo,
   instagramLogo,
   twitterLogo,
-} from "../assets";
+} from "../assets"
 
 function BtnSocial() {
-  const [showButtons, setShowButtons] = useState(false);
+  const [showButtons, setShowButtons] = useState(false)
 
   function handleClick() {
-    setShowButtons(!showButtons);
+    setShowButtons(!showButtons)
   }
 
   return (
-    <div className=" z-50 ">
+    <div className="z-50 ">
       <a rel="notfollow" href="https://www.tiktok.com/" target="_blank">
         <img
           src={tiktokLogo}
@@ -69,7 +69,7 @@ function BtnSocial() {
         }`}
       />
     </div>
-  );
+  )
 }
 
-export default BtnSocial;
+export default BtnSocial

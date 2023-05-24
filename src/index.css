@@ -8,3 +8,7 @@
 .overlay {
   background-color: aquamarine !important;
 }
+
+body {
+  overflow-x: hidden;
+}
