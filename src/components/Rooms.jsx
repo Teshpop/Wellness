@@ -1,10 +1,11 @@
-import { imgH3, imgH4, imgH5, imgH7, imgH9 } from "../assets"
+import { imgH3, imgH4, imgH5, imgH7, imgH9, imgVilla } from "../assets"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 import "swiper/css"
 import "swiper/css/navigation"
+import "swiper/css/autoplay"
 
-import { Navigation, Pagination } from "swiper"
+import { Navigation, Pagination, Autoplay } from "swiper"
 
 function Rooms() {
   const Cont = (props) => {
@@ -65,13 +66,16 @@ function Rooms() {
     <>
       <Swiper
         navigation={true}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         className="mySwiper h-[120vh]"
+        autoplay={{
+          delay: 3000,
+        }}
         pagination
       >
         <SwiperSlide
           className="h-full w-full bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${imgH9})` }}
+          style={{ backgroundImage: `url(${imgVilla})` }}
         ></SwiperSlide>
         <SwiperSlide
           className="swiper-slide"
@@ -97,6 +101,10 @@ function Rooms() {
         >
           <Cont />
         </SwiperSlide>
+        <SwiperSlide
+          className="h-full w-full bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${imgH9})` }}
+        ></SwiperSlide>
       </Swiper>
     </>
   )

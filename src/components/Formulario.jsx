@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { whatsappLogo, Logo } from "../assets"
 import { Form, Formik } from "formik"
 import { createDataRequest } from "../api/datas.api.js"
@@ -6,13 +7,16 @@ import Button from "./Button"
 import img from "../assets/ceremoniaCacao.png"
 
 function Formulario() {
-  const style =
-    "focus:outline-none outline-none focus:shadow-none shadow-lg bg-brown-100 py-1 px-2 rounded-lg transition-all duration-300"
   return (
     <>
-      <section id="Contact">
-        <div className="bg-brown-200 w-full flex flex-col justify-center items-center">
-          <div className="container mx-auto w-full">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 1 } }}
+        viewport={{ once: true }}
+        id="Contact"
+      >
+        <div className="bg-[#FFF] w-full flex flex-col justify-center items-center">
+          <div className="container mx-auto w-full my-20">
             <div className="flex flex-col text-center pt-10">
               <h1 className="text-2xl md:text-4xl uppercase">
                 ¿Listo para empezar tu viaje hacia el bienestar?
@@ -22,7 +26,12 @@ function Formulario() {
               </h2>
             </div>
             <section className="w-full flex h-[590px] px-28 my-20">
-              <div className="flex shadow-2xl rounded-lg overflow-hidden mx-auto">
+              <motion.div
+                initial={{ y: 150 }}
+                whileInView={{ y: 0, transition: { duration: 1 } }}
+                viewport={{ once: true }}
+                className="flex shadow-2xl rounded-lg overflow-hidden mx-auto"
+              >
                 <div className="w-1/2 bg-white h-full p-[42px] ">
                   <h2 className="text-[28px]">Contact us</h2>
                   <p className="text-base mt-2">
@@ -90,7 +99,7 @@ function Formulario() {
                   </Formik>
                 </div>
                 <img className="w-1/2 object-cover" src={img} />
-              </div>
+              </motion.div>
             </section>
 
             {/* <div className=" h-full w-full flex justify-center items-center">
@@ -184,7 +193,7 @@ function Formulario() {
           </div> */}
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   )
 }

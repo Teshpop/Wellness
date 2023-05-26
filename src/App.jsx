@@ -9,6 +9,7 @@ import {
   Formulario,
 } from "./components"
 import Faq from "react-faq-component"
+import { motion } from "framer-motion"
 
 import { Portada, imgWelness } from "./assets"
 
@@ -22,16 +23,20 @@ function Section0() {
         className=" z-1 bg-center h-screen w-full bg-fixed bg-cover bg-no-repeat flex justify-center"
         style={{ backgroundImage: `url(${Portada})` }}
       >
-        <div className=" flex flex-col justify-center items-center relative gap-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className=" flex flex-col justify-center items-center relative gap-6"
+        >
           <h1 className=" text-4xl md:text-5xl lg:text-7xl uppercase ">
             Serenalia
           </h1>
           <div className=" w-[35%] md:w-[70%] ">
-            <p className=" text-lg md:text-2xl lg:text-3xl text-center ">
+            <p className=" text-lg md:text-2xl lg:text-xl text-center ">
               &quot;Conecta con tu esencia y renueva tu energía&quot;
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
@@ -45,7 +50,10 @@ function Section1() {
     >
       <section id="OurMethods" className="w-full container mx-auto h-screen">
         <div className="lg:flex-row lg:justify-between flex flex-col w-full justify-center items-center h-full">
-          <div
+          <motion.div
+            initial={{ y: -50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
             className={` flex flex-col justify-center items-center font-semibold w-1/2`}
           >
             <span className="uppercase text-center font-extrabold ">
@@ -63,9 +71,12 @@ function Section1() {
               Nuestro enfoque se basa en brindarte una experiencia integral que
               nutra tu bienestar en todos los aspectos de tu vida.
             </p>
-          </div>
+          </motion.div>
           <div className={`relative left-0 w-1/2`}>
-            <img
+            <motion.img
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
               src={imgWelness}
               alt="welness place"
               className={`flex mx-autoo rounded w-3/4 `}
@@ -87,13 +98,13 @@ function App() {
         <Programs />
         <Rooms />
         <AboutUs />
-        <div className="py-20 container mx-auto">
+        <div className="py-20 px-10 container mx-auto">
           <Faq data={data} />
         </div>
         <Formulario />
         <BtnSocial />
         <Footer />
-        <Toastify id={"#Contact"} />
+        {/* <Toastify id={"#Contact"} /> */}
       </div>
     </>
   )

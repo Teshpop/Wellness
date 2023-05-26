@@ -24,10 +24,8 @@ function BtnSocial() {
         <img
           src={tiktokLogo}
           alt="Logo Tik-Tok"
-          className={`md:h-20 md:w-20 w-[4rem] h-[4rem] opacity-40 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
-            showButtons
-              ? `visible md:bottom-[24.5rem] bottom-[21.7rem]`
-              : "invisible bottom-7"
+          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
+            showButtons ? `visible bottom-[16.5rem]` : "invisible bottom-7"
           }`}
         />
       </a>
@@ -39,10 +37,8 @@ function BtnSocial() {
         <img
           src={facebookLogo}
           alt="Logo Facebook"
-          className={`md:h-20 md:w-20 w-[4rem] h-[4rem] opacity-40 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
-            showButtons
-              ? `visible md:bottom-[19rem] bottom-[16.7rem]`
-              : "invisible bottom-7"
+          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
+            showButtons ? `visible bottom-[13rem]` : "invisible bottom-7"
           }`}
         />
       </a>
@@ -54,10 +50,8 @@ function BtnSocial() {
         <img
           src={twitterLogo}
           alt="Logo Twitter"
-          className={`md:h-20 md:w-20 w-[4rem] h-[4rem] opacity-40 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
-            showButtons
-              ? `visible md:bottom-[13.5rem] bottom-[11.7rem]`
-              : "invisible bottom-7"
+          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
+            showButtons ? `visible bottom-[9.5rem]` : "invisible bottom-7"
           }`}
         />
       </a>
@@ -69,10 +63,8 @@ function BtnSocial() {
         <img
           src={instagramLogo}
           alt="Logo Instagram"
-          className={`md:h-20 md:w-20 w-[4rem] h-[4rem] opacity-40 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
-            showButtons
-              ? `visible md:bottom-[8rem] bottom-[7rem]`
-              : "invisible bottom-7"
+          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
+            showButtons ? `visible bottom-[6rem]` : "invisible bottom-7"
           }`}
         />
       </a>
@@ -80,8 +72,8 @@ function BtnSocial() {
         src={compartir}
         onClick={handleClick}
         alt="Menu Redes Sociales"
-        className={`md:w-24 md:h-24 w-[5rem] h-[5rem] fixed bottom-5 right-5 hover:opacity-100 cursor-pointer transition-all duration-300 sm: ${
-          showButtons ? "opacity-100" : "opacity-40"
+        className={`w-[3rem] h-[3rem] fixed bottom-[2.5rem] right-7 hover:opacity-100 cursor-pointer transition-all duration-300 z-[99999] ${
+          showButtons ? "opacity-100" : "opacity-90"
         }`}
       />
     </div>

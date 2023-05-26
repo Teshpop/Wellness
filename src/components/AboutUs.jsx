@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { Descripciones } from "../const"
 import { useState } from "react"
 
@@ -57,38 +58,6 @@ function AboutUs() {
               </div>
             </div>
           </div>
-
-          {/* <div>
-            <div className=" h-screen w-screen  md:mx-auto md:mb-[2rem] md:mt-[2rem]  md:h-80% md:w-[47rem] lg:w-[60rem] ">
-              <div className=" bg-brown-200 bg-opacity-85 rounded-3xl backdrop-blur-50 drop-shadow-lg flex flex-col">
-                <div className="sm:mt-[2rem]  rounded-full h-[5rem] w-[5rem] md:h-[7rem] md:w-[7rem] lg:h-[10rem] lg:w-[10rem] flex justify-center items-center">
-                  <img
-                    src={imgbio}
-                    className="h-full w-full object-cover rounded-full"
-                  />
-                </div>
-                <h2 className="sm:mx-[2rem] mt-[2rem] md:mt-[4rem] lg:mt-[5rem] md:mr-[4rem] md:text-3xl lg:mr-[8rem] lg:text-5xl font-bold">
-                  {name}
-                </h2>
-                <button
-                  onClick={onClose}
-                  className="md:absolute font-bold  md:ml-[32rem] md:mb-[3rem]  lg:ml-[55rem] lg:mb-[8rem] "
-                >
-                  x
-                </button>
-                <div className="flex flex-col sm:mb-[1rem] text-justify justify-center overflow-y-scroll">
-                  <p className="px-[1rem] md:px-[2rem] lg:px-[5rem] mt-[1rem] text-sm md:text-base lg:text-lg">
-                    {description}
-                  </p>
-                  <ul className="list-disc px-[1rem] md:px-[2rem] lg:px-[5rem] mt-[1rem] text-sm md:text-base lg:text-lg">
-                    {points.map((point, index) => (
-                      <li key={index}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
       )
     }
@@ -100,7 +69,7 @@ function AboutUs() {
               <div className="my-[1rem] w-[10rem] h-[10rem] md:w-[13rem] md:h-[13rem] lg:w-[15rem] lg:h-[15rem] flex justify-center items-center rounded-full">
                 <img
                   src={imgbio}
-                  className="rounded-full h-full w-full object-cover grayscale transition-all duration-300 md:hover:grayscale-0"
+                  className="rounded-full h-full w-full object-cover  transition-all duration-300 md:hover:grayscale-0"
                 />
               </div>
             </button>
@@ -112,8 +81,14 @@ function AboutUs() {
   }
 
   return (
-    <section id="AboutUs" className="bg-brown-100  w-full py-20 ">
-      <div className="container mx-auto ">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { duration: 1 } }}
+      viewport={{ once: true }}
+      id="AboutUs"
+      className="bg-brown-100  w-full py-20 "
+    >
+      <div className="container mx-auto px-20">
         <h1 className=" text-3xl decoration-brown-300 uppercase text-center mt-2">
           About Us
         </h1>
@@ -142,7 +117,7 @@ function AboutUs() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

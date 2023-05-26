@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Logo } from "../assets"
+import { motion } from "framer-motion"
 
 function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState(null)
@@ -58,10 +59,12 @@ function Header() {
 
   return (
     <>
-      <header
+      <motion.header
         // className={`z-10 h-[80px] w-screen fixed ${
         //   scrollDirection === "down" ? "-top-24 " : "top-0 "
         // } transition-all duration-500`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         className={`z-10 h-[80px] w-screen absolute left-0 top-0`}
       >
         <div className="flex flex-row justify-between items-center container mx-auto">
@@ -136,7 +139,7 @@ function Header() {
             </div>
           </button>
         </div>
-      </header>
+      </motion.header>
     </>
   )
 }
