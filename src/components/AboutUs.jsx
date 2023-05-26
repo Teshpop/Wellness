@@ -1,18 +1,18 @@
-import { Descripciones } from "../const";
-import { useState } from "react";
+import { Descripciones } from "../const"
+import { useState } from "react"
 
 function AboutUs() {
   function BioFirst({ name, imgbio, description, points }) {
-    const [showMyModal, setShowModal] = useState(false);
+    const [showMyModal, setShowModal] = useState(false)
 
-    const handleOnClose = () => setShowModal(false);
+    const handleOnClose = () => setShowModal(false)
 
     function MyModal({ visible, onClose }) {
       const handleOnClose = (e) => {
-        if (e.target.id === "container") onClose();
-      };
+        if (e.target.id === "container") onClose()
+      }
 
-      if (!visible) return null;
+      if (!visible) return null
 
       return (
         <div
@@ -24,11 +24,11 @@ function AboutUs() {
           <div className="bg-brown-200 h-[95%] w-[95%] flex flex-col items-center md:h-[80%] md:w-[50%] rounded-xl shadow-md">
             {/* contenedor encabezado */}
             <div className="flex flex-row py-4 gap-5 md:gap-[3rem] lg:gap-[5rem] w-full justify-center items-center">
-              <div className="h-[6rem] w-[6rem] md:h-[8.5rem] md:w-[8.5rem] ml-auto  rounded-full flex justify-center items-center">
+              <div className="h-[6rem] w-[6rem] md:h-[8.5rem] md:w-[8.5rem] ml-auto  rounded-full flex justify-center items-center shadow-xl">
                 <img
                   src={imgbio}
                   alt={name}
-                  className="h-full w-full object-cover rounded-full"
+                  className="h-full w-full object-cover rounded-full shadow-xl"
                 />
               </div>
               <h2 className=" font-bold text-2xl md:text-5xl">{name}</h2>
@@ -90,7 +90,7 @@ function AboutUs() {
             </div>
           </div> */}
         </div>
-      );
+      )
     }
     return (
       <div>
@@ -108,19 +108,16 @@ function AboutUs() {
         </div>
         <MyModal onClose={handleOnClose} visible={showMyModal} />
       </div>
-    );
+    )
   }
 
   return (
-    <section
-      id="AboutUs"
-      className="bg-brown-100 flex flex-col justify-evenly w-full   "
-    >
-      <div className=" font-semibold text-center   text-brown-300 sm:my-[5rem] sm:mx-[2rem] md:my-[12rem] md:mx-[7rem] lg:my-[17rem] lg:mx-[1rem] items-start text-xl md:text-2xl lg:text-3xl  lg:px-[5rem]">
-        <h1 className="lg:text-5xl md:text-4xl  text-3xl mb-[2rem]   mx-[3rem] uppercase mt-[3rem] ">
-          sobre nosotros
+    <section id="AboutUs" className="bg-brown-100  w-full py-20 ">
+      <div className="container mx-auto ">
+        <h1 className=" text-3xl decoration-brown-300 uppercase text-center mt-2">
+          About Us
         </h1>
-        <p className="text-lg md:text-lg lg:text-2xl mb-[4rem] mx-[3rem] lg:mx-[10rem]   text-center ">
+        <p className="text-base text-center mt-2">
           Nuestro equipo de profesionales apasionados combinan actividades
           revitalizantes, momentos de tranquilidad y reflexión, en un entorno
           sereno y rodeado de hermosos paisajes naturales. Únete a nuestra
@@ -129,29 +126,24 @@ function AboutUs() {
           ¡Te esperamos para un viaje hacia la renovación y el bienestar
           integral!
         </p>
-        <div>
-          <h1 className="pb-[2rem] text-3xl md:text-4xl lg:text-5xl mx-[2rem] uppercase">
-            Nuestros Profesionales
-          </h1>
-          <div>
-            <div className=" mb-[2rem] border-hidden xl:mb-5 items-center flex flex-col xl:flex-row justify-around">
-              {Descripciones.map((description, index) => (
-                <div key={index}>
-                  <BioFirst
-                    name={description.name}
-                    imgbio={description.icon}
-                    description={description.description}
-                    points={description.points}
-                  />
-                  <h2 className="uppercase font-bold">{description.name}</h2>
-                </div>
-              ))}
+        <div className="mt-8 border-hidden items-center flex flex-col xl:flex-row justify-around">
+          {Descripciones.map((description, index) => (
+            <div key={index} className="hover:scale-105 transition-transform">
+              <BioFirst
+                name={description.name}
+                imgbio={description.icon}
+                description={description.description}
+                points={description.points}
+              />
+              <h2 className="uppercase font-bold text-center text-xl">
+                {description.name}
+              </h2>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default AboutUs;
+export default AboutUs

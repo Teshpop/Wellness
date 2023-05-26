@@ -16,7 +16,11 @@ function BtnSocial() {
 
   return (
     <div className="z-50 ">
-      <a rel="notfollow" href="https://www.tiktok.com/" target="_blank">
+      <a
+        rel="notfollow noreferrer"
+        href="https://www.tiktok.com/"
+        target="_blank"
+      >
         <img
           src={tiktokLogo}
           alt="Logo Tik-Tok"
@@ -27,7 +31,11 @@ function BtnSocial() {
           }`}
         />
       </a>
-      <a rel="notfollow" href="https://www.facebook.com/" target="_blank">
+      <a
+        rel="notfollow noreferrer"
+        href="https://www.facebook.com/"
+        target="_blank"
+      >
         <img
           src={facebookLogo}
           alt="Logo Facebook"
@@ -38,7 +46,11 @@ function BtnSocial() {
           }`}
         />
       </a>
-      <a rel="notfollow" href="https://www.twitter.com/" target="_blank">
+      <a
+        rel="notfollow noreferrer"
+        href="https://www.twitter.com/"
+        target="_blank"
+      >
         <img
           src={twitterLogo}
           alt="Logo Twitter"

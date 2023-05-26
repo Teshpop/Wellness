@@ -18,3 +18,23 @@ body {
 
 .swiper-slide {
 }
+
+/* FAQ */
+
+.faq-row-wrapper {
+  background-color: #fff !important;
+}
+
+.faq-title h2 {
+  color: #76694e !important;
+  font-size: 30px !important;
+}
+
+.row-title-text {
+  font-weight: bold !important;
+  font-size: 20px;
+}
+
+.row-content-text {
+  font-weight: normal !important;
+}

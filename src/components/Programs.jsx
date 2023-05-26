@@ -10,6 +10,7 @@ import { clases } from "../const"
 import { EffectCoverflow, Pagination } from "swiper"
 
 import { v4 as uuidv4 } from "uuid"
+import Button from "./Button"
 
 export default function Programs() {
   return (
@@ -76,9 +77,7 @@ export default function Programs() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <button className="text-base text-white bg-black py-3 px-3 rounded mt-10 hover:shadow-lg transition-shadow hover:opacity-90">
-              Reserva ya
-            </button>
+            <Button className="mt-10">Reserva ya</Button>
           </div>
         </div>
       </div>

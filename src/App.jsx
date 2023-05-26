@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import {
   AboutUs,
   BtnSocial,
@@ -9,10 +8,9 @@ import {
   Programs,
   Formulario,
 } from "./components"
+import Faq from "react-faq-component"
 
 import { Portada, imgWelness } from "./assets"
-
-import { useEffect, useRef, useState } from "react"
 
 import "./index.css"
 
@@ -30,7 +28,7 @@ function Section0() {
           </h1>
           <div className=" w-[35%] md:w-[70%] ">
             <p className=" text-lg md:text-2xl lg:text-3xl text-center ">
-              "Conecta con tu esencia y renueva tu energía"
+              &quot;Conecta con tu esencia y renueva tu energía&quot;
             </p>
           </div>
         </div>
@@ -89,6 +87,9 @@ function App() {
         <Programs />
         <Rooms />
         <AboutUs />
+        <div className="py-20 container mx-auto">
+          <Faq data={data} />
+        </div>
         <Formulario />
         <BtnSocial />
         <Footer />
@@ -96,6 +97,38 @@ function App() {
       </div>
     </>
   )
+}
+const data = {
+  title: "Preguntas Frecuentes",
+  rows: [
+    {
+      title:
+        "¿Qué duración tiene el retiro ‘’Reencuentro con tu ser interior’’?",
+      content:
+        "En esta exclusiva ocasión, nuestro retiro tendrá la duración de 4 días 3 noches en la hermosa costa del sol.      ",
+    },
+    {
+      title:
+        "¿Cuales son las actividades que ofrecen durante el retiro ‘’Reencuentro con tu ser interior’’?      ",
+      content: `Este retiro ofrece una experiencia única, diseñada  para nutrir tu bienestar y promover la transformación interior. 
+        Podrás disfrutar de diversas actividades como Yoga Nidra, círculo de bienvenida, yoga social, mindfulness, comidas conscientes, conexión Reiki, ritual de la creatividad, fiesta de renacimiento en la playa (cena sunset, ceremonia del cacao y extatic dance), yoga al amanecer y ritual del florecimiento en el mar.
+        `,
+    },
+    {
+      title:
+        "¿Qué tipo de alojamiento y comidas se ofrecen durante el retiro ‘’Reencuentro con tu ser interior’’?      ",
+      content: `Este hermoso lugar de retiro fue cuidadosamente seleccionado por sus espaciosas y relajantes instalaciones que están rodeados de la belleza natural de Marbella, con paisajes que te invitan a conectar con la paz interior y la serenidad.
+
+        Ofrecemos nutritivas comidas saludables que se adaptan a diferentes necesidades dietéticas. El entorno natural y tranquilo proporciona un ambiente propicio para tu descanso y rejuvenecimiento.
+        `,
+    },
+    {
+      title: `¿Cómo puedo reservar un lugar en el retiro ‘’Reencuentro con tu ser interior’’ ?
+      `,
+      content: `Puedes reservar tu lugar en un retiro a través de nuestro sitio web realizando un depósito o poniéndote en contacto con nuestro equipo. Te brindaremos toda la información necesaria y te guiaremos a través del proceso de reserva.
+      `,
+    },
+  ],
 }
 
 export default App
