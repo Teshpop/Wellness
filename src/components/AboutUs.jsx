@@ -1,19 +1,19 @@
-import { motion } from "framer-motion"
-import { Descripciones } from "../const"
-import { useState } from "react"
+import { motion } from "framer-motion";
+import { Descripciones } from "../const";
+import { useState } from "react";
 
 function AboutUs() {
   function BioFirst({ name, imgbio, description, points }) {
-    const [showMyModal, setShowModal] = useState(false)
+    const [showMyModal, setShowModal] = useState(false);
 
-    const handleOnClose = () => setShowModal(false)
+    const handleOnClose = () => setShowModal(false);
 
     function MyModal({ visible, onClose }) {
       const handleOnClose = (e) => {
-        if (e.target.id === "container") onClose()
-      }
+        if (e.target.id === "container") onClose();
+      };
 
-      if (!visible) return null
+      if (!visible) return null;
 
       return (
         <div
@@ -59,7 +59,7 @@ function AboutUs() {
             </div>
           </div>
         </div>
-      )
+      );
     }
     return (
       <div>
@@ -69,7 +69,7 @@ function AboutUs() {
               <div className="my-[1rem] w-[10rem] h-[10rem] md:w-[13rem] md:h-[13rem] lg:w-[15rem] lg:h-[15rem] flex justify-center items-center rounded-full">
                 <img
                   src={imgbio}
-                  className="rounded-full h-full w-full object-cover  transition-all duration-300 md:hover:grayscale-0"
+                  className="rounded-full h-full w-full object-cover duration-300 hover:scale-105 transition-transform"
                 />
               </div>
             </button>
@@ -77,7 +77,7 @@ function AboutUs() {
         </div>
         <MyModal onClose={handleOnClose} visible={showMyModal} />
       </div>
-    )
+    );
   }
 
   return (
@@ -103,7 +103,7 @@ function AboutUs() {
         </p>
         <div className="mt-8 border-hidden items-center flex flex-col xl:flex-row justify-around">
           {Descripciones.map((description, index) => (
-            <div key={index} className="hover:scale-105 transition-transform">
+            <div key={index}>
               <BioFirst
                 name={description.name}
                 imgbio={description.icon}
@@ -118,7 +118,7 @@ function AboutUs() {
         </div>
       </div>
     </motion.section>
-  )
+  );
 }
 
-export default AboutUs
+export default AboutUs;

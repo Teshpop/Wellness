@@ -1,17 +1,17 @@
-import { useState } from "react"
+import { useState } from "react";
 import {
   compartir,
   tiktokLogo,
   facebookLogo,
   instagramLogo,
   twitterLogo,
-} from "../assets"
+} from "../assets";
 
 function BtnSocial() {
-  const [showButtons, setShowButtons] = useState(false)
+  const [showButtons, setShowButtons] = useState(false);
 
   function handleClick() {
-    setShowButtons(!showButtons)
+    setShowButtons(!showButtons);
   }
 
   return (
@@ -24,7 +24,7 @@ function BtnSocial() {
         <img
           src={tiktokLogo}
           alt="Logo Tik-Tok"
-          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
+          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 z-50 ${
             showButtons ? `visible bottom-[16.5rem]` : "invisible bottom-7"
           }`}
         />
@@ -37,7 +37,7 @@ function BtnSocial() {
         <img
           src={facebookLogo}
           alt="Logo Facebook"
-          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
+          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 z-50 ${
             showButtons ? `visible bottom-[13rem]` : "invisible bottom-7"
           }`}
         />
@@ -50,7 +50,7 @@ function BtnSocial() {
         <img
           src={twitterLogo}
           alt="Logo Twitter"
-          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
+          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 z-50 ${
             showButtons ? `visible bottom-[9.5rem]` : "invisible bottom-7"
           }`}
         />
@@ -63,7 +63,7 @@ function BtnSocial() {
         <img
           src={instagramLogo}
           alt="Logo Instagram"
-          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 ${
+          className={`w-[3rem] h-[3rem] opacity-80 hover:opacity-100 fixed md:right-7 right-8 transition-all duration-300 z-50 ${
             showButtons ? `visible bottom-[6rem]` : "invisible bottom-7"
           }`}
         />
@@ -72,12 +72,12 @@ function BtnSocial() {
         src={compartir}
         onClick={handleClick}
         alt="Menu Redes Sociales"
-        className={`w-[3rem] h-[3rem] fixed bottom-[2.5rem] right-7 hover:opacity-100 cursor-pointer transition-all duration-300 z-[99999] ${
+        className={`w-[3rem] h-[3rem] fixed bottom-[2.5rem] right-7 hover:opacity-100 cursor-pointer transition-all duration-300 z-50 ${
           showButtons ? "opacity-100" : "opacity-90"
         }`}
       />
     </div>
-  )
+  );
 }
 
-export default BtnSocial
+export default BtnSocial;

@@ -1,17 +1,17 @@
-import { imgH3, imgH4, imgH5, imgH7, imgH9, imgVilla } from "../assets"
-import { Swiper, SwiperSlide } from "swiper/react"
+import { imgH3, imgH4, imgH5, imgH7, imgH9, imgVilla } from "../assets";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/autoplay"
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
-import { Navigation, Pagination, Autoplay } from "swiper"
+import { Navigation, Pagination, Autoplay } from "swiper";
 
 function Rooms() {
   const Cont = (props) => {
     return (
       <div className="flex flex-col h-full w-full items-end">
-        <div className="h-full md:w-[45%] flex px-14 pt-10 justify-center items-center flex-col bg-brown-300 bg-opacity-[0.52] gap-5 md:gap-20">
+        <div className="h-full w-full md:w-[45%] flex px-14 pt-10 justify-center items-center flex-col bg-brown-300 bg-opacity-[0.52] gap-5 md:gap-20">
           <div className="uppercase flex flex-col">
             <div className="flex flex-row justify-center items-center gap-2 text-3xl">
               <span className="opacity-100 text-white2">Desde</span>
@@ -59,9 +59,10 @@ function Rooms() {
           </div>
         </div>
       </div>
-    )
-  }
+    );
+  };
 
+  const images = [imgVilla, imgH3, imgH4, imgH5, imgH7, imgH9];
   return (
     <>
       <Swiper
@@ -73,41 +74,17 @@ function Rooms() {
         }}
         pagination
       >
-        <SwiperSlide
-          className="h-full w-full bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${imgVilla})` }}
-        ></SwiperSlide>
-        <SwiperSlide
-          className="swiper-slide"
-          style={{ backgroundImage: `url(${imgH3})` }}
-        >
-          <Cont />
-        </SwiperSlide>
-        <SwiperSlide
-          className="swiper-slide"
-          style={{ backgroundImage: `url(${imgH4})` }}
-        >
-          <Cont />
-        </SwiperSlide>
-        <SwiperSlide
-          className="swiper-slide"
-          style={{ backgroundImage: `url(${imgH5})` }}
-        >
-          <Cont />
-        </SwiperSlide>
-        <SwiperSlide
-          className="swiper-slide"
-          style={{ backgroundImage: `url(${imgH7})` }}
-        >
-          <Cont />
-        </SwiperSlide>
-        <SwiperSlide
-          className="h-full w-full bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${imgH9})` }}
-        ></SwiperSlide>
+        {images.map((image, index) => (
+          <SwiperSlide
+            className="h-full w-full bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${image})` }}
+          >
+            {index <= 4 && index >= 1 ? <Cont /> : null}
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
-  )
+  );
 }
 
-export default Rooms
+export default Rooms;

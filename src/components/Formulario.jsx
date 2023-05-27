@@ -1,10 +1,10 @@
-import { motion } from "framer-motion"
-import { whatsappLogo, Logo } from "../assets"
-import { Form, Formik } from "formik"
-import { createDataRequest } from "../api/datas.api.js"
-import { Input, Textarea } from "@nextui-org/react"
-import Button from "./Button"
-import img from "../assets/ceremoniaCacao.png"
+import { motion } from "framer-motion";
+import { whatsappLogo, Logo } from "../assets";
+import { Form, Formik } from "formik";
+import { createDataRequest } from "../api/datas.api.js";
+import { Input, Textarea } from "@nextui-org/react";
+import Button from "./Button";
+import img from "../assets/ceremoniaCacao.png";
 
 function Formulario() {
   return (
@@ -45,27 +45,31 @@ function Formulario() {
                       number: "",
                     }}
                     onSubmit={async (values, actions) => {
-                      console.log(values)
+                      console.log(values);
                       try {
-                        const response = await createDataRequest(values)
-                        console.log(response)
-                        actions.resetForm()
+                        const response = await createDataRequest(values);
+                        console.log(response);
+                        actions.resetForm();
                       } catch (error) {
-                        console.error(error)
+                        console.error(error);
                       }
                     }}
                   >
                     {({ handleChange, handleSubmit, values, isSubmitting }) => (
                       <Form onSubmit={handleSubmit}>
-                        <div className="flex flex-col text-xl gap-4 items-center mt-8 ">
+                        <div className="flex flex-col text-xl gap-4 items-center mt-8 w-full">
                           <Input
-                            className="w-full"
                             type="text"
                             width="100%"
                             name="name"
                             placeholder="Nombre"
                             onChange={handleChange}
                             value={values.name}
+                            css={{
+                              "&:focus": {
+                                outline: "none",
+                              },
+                            }}
                           />
 
                           <Input
@@ -195,7 +199,7 @@ function Formulario() {
         </div>
       </motion.section>
     </>
-  )
+  );
 }
 
-export default Formulario
+export default Formulario;

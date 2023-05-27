@@ -7,13 +7,13 @@ import {
   Header,
   Programs,
   Formulario,
-} from "./components"
-import Faq from "react-faq-component"
-import { motion } from "framer-motion"
+} from "./components";
+import Faq from "react-faq-component";
+import { motion } from "framer-motion";
 
-import { Portada, imgWelness } from "./assets"
+import { Portada, imgWelness } from "./assets";
 
-import "./index.css"
+import "./index.css";
 
 function Section0() {
   return (
@@ -39,7 +39,7 @@ function Section0() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
 
 function Section1() {
@@ -49,43 +49,43 @@ function Section1() {
       className=" relative  bg-brown-100  text-brown-300 flex flex-col md:flex-row "
     >
       <section id="OurMethods" className="w-full container mx-auto h-screen">
-        <div className="lg:flex-row lg:justify-between flex flex-col w-full justify-center items-center h-full">
+        <div className="lg:flex-row lg:justify-between flex flex-col w-full justify-evenly items-center h-full">
           <motion.div
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className={` flex flex-col justify-center items-center font-semibold w-1/2`}
+            className={` flex flex-col justify-center items-center gap-3 font-semibold w-full lg:w-1/2`}
           >
             <span className="uppercase text-center font-extrabold ">
               About us
             </span>
-            <h1 className=" lg:text-5xl  lg:mx-[4rem] decoration-brown-300 text-2xl md:text-4xl uppercase text-center mt-2">
+            <h1 className=" lg:text-5xl  lg:mx-[4rem] decoration-brown-300 text-3xl md:text-4xl uppercase text-center mt-2">
               Nuestro Metodo
             </h1>
-            <p className="text-base w-2/3 mx-auto text-center mt-4">
+            <p className="text-base w-[75%] sm:w-2/3 mx-auto text-center mt-4">
               En Serenalia, hemos desarrollado un método único y holístico que
               combina sabiduría ancestral, prácticas espirituales y herramientas
               de desarrollo personal.
             </p>
-            <p className="w-2/3 mx-auto text-center mt-1">
+            <p className="mx-auto w-[75%] sm:w-2/3 text-center mt-1">
               Nuestro enfoque se basa en brindarte una experiencia integral que
               nutra tu bienestar en todos los aspectos de tu vida.
             </p>
           </motion.div>
-          <div className={`relative left-0 w-1/2`}>
+          <div className={`relative flex justify-center md:left-0 md:w-1/2`}>
             <motion.img
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               src={imgWelness}
               alt="welness place"
-              className={`flex mx-autoo rounded w-3/4 `}
+              className={`flex mx-auto rounded w-3/4 `}
             />
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 function App() {
@@ -107,7 +107,7 @@ function App() {
         {/* <Toastify id={"#Contact"} /> */}
       </div>
     </>
-  )
+  );
 }
 const data = {
   title: "Preguntas Frecuentes",
@@ -140,6 +140,6 @@ const data = {
       `,
     },
   ],
-}
+};
 
-export default App
+export default App;

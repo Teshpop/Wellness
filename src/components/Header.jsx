@@ -1,49 +1,49 @@
-import { useEffect, useState } from "react"
-import { Logo } from "../assets"
-import { motion } from "framer-motion"
+import { useEffect, useState } from "react";
+import { Logo } from "../assets";
+import { motion } from "framer-motion";
 
 function useScrollDirection() {
-  const [scrollDirection, setScrollDirection] = useState(null)
+  const [scrollDirection, setScrollDirection] = useState(null);
 
   useEffect(() => {
-    let lastScrollY = window.pageYOffset
+    let lastScrollY = window.pageYOffset;
 
     const updateScrollDirection = () => {
-      const scrollY = window.pageYOffset
-      const direction = scrollY > lastScrollY ? "down" : "up"
+      const scrollY = window.pageYOffset;
+      const direction = scrollY > lastScrollY ? "down" : "up";
       if (
         direction !== scrollDirection &&
         (scrollY - lastScrollY > 5 || scrollY - lastScrollY < -5)
       ) {
-        setScrollDirection(direction)
+        setScrollDirection(direction);
       }
-      lastScrollY = scrollY > 0 ? scrollY : 0
-    }
-    window.addEventListener("scroll", updateScrollDirection)
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+    };
+    window.addEventListener("scroll", updateScrollDirection);
     return () => {
-      window.removeEventListener("scroll", updateScrollDirection)
-    }
-  }, [scrollDirection])
+      window.removeEventListener("scroll", updateScrollDirection);
+    };
+  }, [scrollDirection]);
 
-  return scrollDirection
+  return scrollDirection;
 }
 
 function Header() {
-  const [showMenu, setShowMenu] = useState(false)
-  const scrollDirection = useScrollDirection()
+  const [showMenu, setShowMenu] = useState(false);
+  const scrollDirection = useScrollDirection();
 
   function BtnMen({ title, id }) {
-    const [hover, setHover] = useState(false)
+    const [hover, setHover] = useState(false);
     return (
       <>
         <a
           rel="notfollow"
           href={id}
           onMouseEnter={() => {
-            setHover(true)
+            setHover(true);
           }}
           onMouseLeave={() => {
-            setHover(false)
+            setHover(false);
           }}
         >
           {title}
@@ -54,7 +54,7 @@ function Header() {
           ></div>
         </a>
       </>
-    )
+    );
   }
 
   return (
@@ -92,7 +92,7 @@ function Header() {
               scrollDirection === "down" ? "top-0" : "top-0"
             }`}
             onClick={() => {
-              setShowMenu(!showMenu)
+              setShowMenu(!showMenu);
             }}
           >
             <div className=" w-10 h-1 bg-brown-200 mb-2 "></div>
@@ -141,7 +141,7 @@ function Header() {
         </div>
       </motion.header>
     </>
-  )
+  );
 }
 
-export default Header
+export default Header;
